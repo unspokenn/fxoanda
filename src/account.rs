@@ -4,7 +4,7 @@ pub mod list_positions {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -146,7 +146,7 @@ pub mod list_open_positions {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -287,7 +287,7 @@ pub mod get_position {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -445,7 +445,7 @@ pub mod close_position {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -740,7 +740,7 @@ pub mod list_trades {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -965,7 +965,7 @@ pub mod list_open_trades {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -1120,7 +1120,7 @@ pub mod get_trade {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -1294,7 +1294,7 @@ pub mod close_trade {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -1512,7 +1512,7 @@ pub mod set_trade_client_extensions {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -1718,7 +1718,7 @@ pub mod set_trade_dependent_orders {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -2016,7 +2016,7 @@ pub mod list_accounts {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -2137,7 +2137,7 @@ pub mod get_account {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -2295,7 +2295,7 @@ pub mod get_account_summary {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -2452,7 +2452,7 @@ pub mod get_account_instruments {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -2609,7 +2609,7 @@ pub mod configure_account {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -2800,7 +2800,7 @@ pub mod get_account_changes {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -2980,7 +2980,7 @@ pub mod list_transactions {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -3243,7 +3243,7 @@ pub mod get_transaction {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -3415,7 +3415,7 @@ pub mod get_transaction_range {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -3613,7 +3613,7 @@ pub mod get_transactions_since_id {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -3785,7 +3785,7 @@ pub mod stream_transactions {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -3927,7 +3927,7 @@ pub mod get_prices {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -4170,7 +4170,7 @@ pub mod stream_pricing {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -4365,7 +4365,7 @@ pub mod get_account_instrument_candles {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -4703,7 +4703,7 @@ pub mod create_market_order {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -4911,7 +4911,7 @@ pub mod create_limit_order {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -5119,7 +5119,7 @@ pub mod create_stop_order {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -5327,7 +5327,7 @@ pub mod list_orders {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -5552,7 +5552,7 @@ pub mod list_pending_orders {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -5707,7 +5707,7 @@ pub mod get_order {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -5883,7 +5883,7 @@ pub mod replace_order {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -6130,7 +6130,7 @@ pub mod cancel_order {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -6326,7 +6326,7 @@ pub mod set_order_client_extensions {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -6543,36 +6543,36 @@ pub mod set_order_client_extensions {
         pub related_transaction_i_ds: Option<Vec<String>>,
     }
 }
-pub use cancel_order::*;
-pub use close_position::*;
-pub use close_trade::*;
-pub use configure_account::*;
-pub use create_limit_order::*;
-pub use create_market_order::*;
-pub use create_stop_order::*;
-pub use get_account::*;
-pub use get_account_changes::*;
-pub use get_account_instrument_candles::*;
-pub use get_account_instruments::*;
-pub use get_account_summary::*;
-pub use get_order::*;
-pub use get_position::*;
-pub use get_prices::*;
-pub use get_trade::*;
-pub use get_transaction::*;
-pub use get_transaction_range::*;
-pub use get_transactions_since_id::*;
-pub use list_accounts::*;
-pub use list_open_positions::*;
-pub use list_open_trades::*;
-pub use list_orders::*;
-pub use list_pending_orders::*;
-pub use list_positions::*;
-pub use list_trades::*;
-pub use list_transactions::*;
-pub use replace_order::*;
-pub use set_order_client_extensions::*;
-pub use set_trade_client_extensions::*;
-pub use set_trade_dependent_orders::*;
-pub use stream_pricing::*;
-pub use stream_transactions::*;
+pub use crate::cancel_order::*;
+pub use crate::close_position::*;
+pub use crate::close_trade::*;
+pub use crate::configure_account::*;
+pub use crate::create_limit_order::*;
+pub use crate::create_market_order::*;
+pub use crate::create_stop_order::*;
+pub use crate::get_account::*;
+pub use crate::get_account_changes::*;
+pub use crate::get_account_instrument_candles::*;
+pub use crate::get_account_instruments::*;
+pub use crate::get_account_summary::*;
+pub use crate::get_order::*;
+pub use crate::get_position::*;
+pub use crate::get_prices::*;
+pub use crate::get_trade::*;
+pub use crate::get_transaction::*;
+pub use crate::get_transaction_range::*;
+pub use crate::get_transactions_since_id::*;
+pub use crate::list_accounts::*;
+pub use crate::list_open_positions::*;
+pub use crate::list_open_trades::*;
+pub use crate::list_orders::*;
+pub use crate::list_pending_orders::*;
+pub use crate::list_positions::*;
+pub use crate::list_trades::*;
+pub use crate::list_transactions::*;
+pub use crate::replace_order::*;
+pub use crate::set_order_client_extensions::*;
+pub use crate::set_trade_client_extensions::*;
+pub use crate::set_trade_dependent_orders::*;
+pub use crate::stream_pricing::*;
+pub use crate::stream_transactions::*;

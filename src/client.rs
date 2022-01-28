@@ -15,8 +15,8 @@ pub struct Client {
 macro_rules! client_requests { 
   ( $( $func:ident ( $request:ident ) -> $response:ident ),* ) => {
       $(
-         use $request;
-         use $response;
+         use crate::$request;
+         use crate::$response;
          impl Client {
            pub fn $func( &self, x: $request ) -> Result<$response, Box<dyn Error>> {
              x.remote(&self)

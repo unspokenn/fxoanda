@@ -4,7 +4,7 @@ pub mod get_instrument_candles {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -323,7 +323,7 @@ pub mod get_instrument_price {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -497,7 +497,7 @@ pub mod get_instrument_price_range {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -701,7 +701,7 @@ pub mod get_order_book {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -880,7 +880,7 @@ pub mod get_position_book {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -1052,8 +1052,8 @@ pub mod get_position_book {
         pub position_book: Option<PositionBook>,
     }
 }
-pub use get_instrument_candles::*;
-pub use get_instrument_price::*;
-pub use get_instrument_price_range::*;
-pub use get_order_book::*;
-pub use get_position_book::*;
+pub use crate::get_instrument_candles::*;
+pub use crate::get_instrument_price::*;
+pub use crate::get_instrument_price_range::*;
+pub use crate::get_order_book::*;
+pub use crate::get_position_book::*;

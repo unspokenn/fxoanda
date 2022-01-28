@@ -4,7 +4,7 @@ pub mod get_base_prices {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -163,7 +163,7 @@ pub mod get_price_range {
     #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
-    use Client;
+    use crate::Client;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -357,5 +357,5 @@ pub mod get_price_range {
         pub prices: Option<Vec<Price>>,
     }
 }
-pub use get_base_prices::*;
-pub use get_price_range::*;
+pub use crate::get_base_prices::*;
+pub use crate::get_price_range::*;
