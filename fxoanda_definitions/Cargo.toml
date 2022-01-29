@@ -11,4 +11,4 @@ serde_json = "1.0"
 serde = { version = "1.0.83", features = ["derive"] }
 chrono = { version = "0.4.6", features = ["serde"] }
 time = "0.3.6"
-fxoanda_serdes = {version="0.1.0", path = "../fxoanda_serdes/" }
+fxoanda_serdes = { version = "0.2.0", path = "../fxoanda_serdes/" }
