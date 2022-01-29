@@ -1,16 +1,15 @@
 pub mod list_positions {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
         #[serde(rename = "Authorization", skip_serializing_if = "Option::is_none")]
         pub authorization: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -24,6 +23,7 @@ pub mod list_positions {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -32,6 +32,7 @@ pub mod list_positions {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -40,6 +41,7 @@ pub mod list_positions {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -50,7 +52,6 @@ pub mod list_positions {
     /// List all Positions for an Account. The Positions returned are for
     /// every instrument that has had a position during the lifetime of an the
     /// Account.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct ListPositionsRequest {
         #[serde(skip_serializing)]
@@ -141,18 +142,18 @@ pub mod list_positions {
 }
 
 pub mod list_open_positions {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
         #[serde(rename = "Authorization", skip_serializing_if = "Option::is_none")]
         pub authorization: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -166,6 +167,7 @@ pub mod list_open_positions {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -174,6 +176,7 @@ pub mod list_open_positions {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -182,6 +185,7 @@ pub mod list_open_positions {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -191,7 +195,6 @@ pub mod list_open_positions {
     /// Open Positions
     /// List all open Positions for an Account. An open Position is a Position
     /// in an Account that currently has a Trade opened for it.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct ListOpenPositionsRequest {
         #[serde(skip_serializing)]
@@ -282,18 +285,18 @@ pub mod list_open_positions {
 }
 
 pub mod get_position {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
         #[serde(rename = "Authorization", skip_serializing_if = "Option::is_none")]
         pub authorization: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -310,6 +313,7 @@ pub mod get_position {
         #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
         pub instrument: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath {
@@ -321,6 +325,7 @@ pub mod get_position {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -329,6 +334,7 @@ pub mod get_position {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -338,7 +344,6 @@ pub mod get_position {
     /// Instrument Position
     /// Get the details of a single Instrument's Position in an Account. The
     /// Position may by open or not.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetPositionRequest {
         #[serde(skip_serializing)]
@@ -440,12 +445,11 @@ pub mod get_position {
 }
 
 pub mod close_position {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -458,6 +462,7 @@ pub mod close_position {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -475,6 +480,7 @@ pub mod close_position {
         #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
         pub instrument: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath {
@@ -504,6 +510,7 @@ pub mod close_position {
         )]
         pub short_client_extensions: Option<ClientExtensions>,
     }
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {
@@ -517,6 +524,7 @@ pub mod close_position {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -525,7 +533,6 @@ pub mod close_position {
 
     /// Close Position
     /// Closeout the open Position for a specific instrument in an Account.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct ClosePositionRequest {
         #[serde(skip_serializing)]
@@ -735,12 +742,11 @@ pub mod close_position {
 }
 
 pub mod list_trades {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -753,6 +759,7 @@ pub mod list_trades {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -767,6 +774,7 @@ pub mod list_trades {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -775,6 +783,7 @@ pub mod list_trades {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -798,6 +807,7 @@ pub mod list_trades {
         #[serde(rename = "beforeID", skip_serializing_if = "Option::is_none")]
         pub before_id: Option<String>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {
@@ -812,7 +822,6 @@ pub mod list_trades {
 
     /// List Trades
     /// Get a list of Trades for an Account
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct ListTradesRequest {
         #[serde(skip_serializing)]
@@ -960,12 +969,11 @@ pub mod list_trades {
 }
 
 pub mod list_open_trades {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -978,6 +986,7 @@ pub mod list_open_trades {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -992,6 +1001,7 @@ pub mod list_open_trades {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -1000,6 +1010,7 @@ pub mod list_open_trades {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -1008,6 +1019,7 @@ pub mod list_open_trades {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -1016,7 +1028,6 @@ pub mod list_open_trades {
 
     /// List Open Trades
     /// Get the list of open Trades for an Account
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct ListOpenTradesRequest {
         #[serde(skip_serializing)]
@@ -1115,12 +1126,11 @@ pub mod list_open_trades {
 }
 
 pub mod get_trade {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -1133,6 +1143,7 @@ pub mod get_trade {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -1150,6 +1161,7 @@ pub mod get_trade {
         #[serde(rename = "tradeSpecifier", skip_serializing_if = "Option::is_none")]
         pub trade_specifier: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath {
@@ -1161,6 +1173,7 @@ pub mod get_trade {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -1169,6 +1182,7 @@ pub mod get_trade {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -1177,7 +1191,6 @@ pub mod get_trade {
 
     /// Trade Details
     /// Get the details of a specific Trade in an Account
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetTradeRequest {
         #[serde(skip_serializing)]
@@ -1289,12 +1302,11 @@ pub mod get_trade {
 }
 
 pub mod close_trade {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -1307,6 +1319,7 @@ pub mod close_trade {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -1324,6 +1337,7 @@ pub mod close_trade {
         #[serde(rename = "tradeSpecifier", skip_serializing_if = "Option::is_none")]
         pub trade_specifier: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath {
@@ -1338,6 +1352,7 @@ pub mod close_trade {
         #[serde(rename = "units", skip_serializing_if = "Option::is_none")]
         pub units: Option<String>,
     }
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody { units: None }
@@ -1346,6 +1361,7 @@ pub mod close_trade {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -1354,7 +1370,6 @@ pub mod close_trade {
 
     /// Close Trade
     /// Close (partially or fully) a specific open Trade in an Account
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct CloseTradeRequest {
         #[serde(skip_serializing)]
@@ -1507,12 +1522,11 @@ pub mod close_trade {
 }
 
 pub mod set_trade_client_extensions {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -1525,6 +1539,7 @@ pub mod set_trade_client_extensions {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -1542,6 +1557,7 @@ pub mod set_trade_client_extensions {
         #[serde(rename = "tradeSpecifier", skip_serializing_if = "Option::is_none")]
         pub trade_specifier: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath {
@@ -1556,6 +1572,7 @@ pub mod set_trade_client_extensions {
         #[serde(rename = "clientExtensions", skip_serializing_if = "Option::is_none")]
         pub client_extensions: Option<ClientExtensions>,
     }
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {
@@ -1566,6 +1583,7 @@ pub mod set_trade_client_extensions {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -1575,7 +1593,6 @@ pub mod set_trade_client_extensions {
     /// Set Trade Client Extensions
     /// Update the Client Extensions for a Trade. Do not add, update, or
     /// delete the Client Extensions if your account is associated with MT4.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct SetTradeClientExtensionsRequest {
         #[serde(skip_serializing)]
@@ -1713,12 +1730,11 @@ pub mod set_trade_client_extensions {
 }
 
 pub mod set_trade_dependent_orders {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -1731,6 +1747,7 @@ pub mod set_trade_dependent_orders {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -1748,6 +1765,7 @@ pub mod set_trade_dependent_orders {
         #[serde(rename = "tradeSpecifier", skip_serializing_if = "Option::is_none")]
         pub trade_specifier: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath {
@@ -1768,6 +1786,7 @@ pub mod set_trade_dependent_orders {
         #[serde(rename = "trailingStopLoss", skip_serializing_if = "Option::is_none")]
         pub trailing_stop_loss: Option<TrailingStopLossDetails>,
     }
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {
@@ -1780,6 +1799,7 @@ pub mod set_trade_dependent_orders {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -1789,7 +1809,6 @@ pub mod set_trade_dependent_orders {
     /// Set Dependent Orders
     /// Create, replace and cancel a Trade's dependent Orders (Take Profit,
     /// Stop Loss and Trailing Stop Loss) through the Trade itself
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct SetTradeDependentOrdersRequest {
         #[serde(skip_serializing)]
@@ -2011,18 +2030,18 @@ pub mod set_trade_dependent_orders {
 }
 
 pub mod list_accounts {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
         #[serde(rename = "Authorization", skip_serializing_if = "Option::is_none")]
         pub authorization: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -2033,6 +2052,7 @@ pub mod list_accounts {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestPath {}
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath {}
@@ -2041,6 +2061,7 @@ pub mod list_accounts {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -2049,6 +2070,7 @@ pub mod list_accounts {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -2057,7 +2079,6 @@ pub mod list_accounts {
 
     /// List Accounts
     /// Get a list of all Accounts authorized for the provided token.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct ListAccountsRequest {
         #[serde(skip_serializing)]
@@ -2132,12 +2153,11 @@ pub mod list_accounts {
 }
 
 pub mod get_account {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -2150,6 +2170,7 @@ pub mod get_account {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -2164,6 +2185,7 @@ pub mod get_account {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -2172,6 +2194,7 @@ pub mod get_account {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -2180,6 +2203,7 @@ pub mod get_account {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -2190,7 +2214,6 @@ pub mod get_account {
     /// Get the full details for a single Account that a client has access to.
     /// Full pending Order, open Trade and open Position representations are
     /// provided.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetAccountRequest {
         #[serde(skip_serializing)]
@@ -2290,12 +2313,11 @@ pub mod get_account {
 }
 
 pub mod get_account_summary {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -2308,6 +2330,7 @@ pub mod get_account_summary {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -2322,6 +2345,7 @@ pub mod get_account_summary {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -2330,6 +2354,7 @@ pub mod get_account_summary {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -2338,6 +2363,7 @@ pub mod get_account_summary {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -2346,7 +2372,6 @@ pub mod get_account_summary {
 
     /// Account Summary
     /// Get a summary for a single Account that a client has access to.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetAccountSummaryRequest {
         #[serde(skip_serializing)]
@@ -2447,18 +2472,18 @@ pub mod get_account_summary {
 }
 
 pub mod get_account_instruments {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
         #[serde(rename = "Authorization", skip_serializing_if = "Option::is_none")]
         pub authorization: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -2472,6 +2497,7 @@ pub mod get_account_instruments {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -2480,6 +2506,7 @@ pub mod get_account_instruments {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -2491,6 +2518,7 @@ pub mod get_account_instruments {
         #[serde(rename = "instruments", skip_serializing_if = "Option::is_none")]
         pub instruments: Option<Vec<String>>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery { instruments: None }
@@ -2502,7 +2530,6 @@ pub mod get_account_instruments {
     /// of tradeable instruments is dependent on the regulatory division that
     /// the Account is located in, thus should be the same for all Accounts
     /// owned by a single user.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetAccountInstrumentsRequest {
         #[serde(skip_serializing)]
@@ -2604,12 +2631,11 @@ pub mod get_account_instruments {
 }
 
 pub mod configure_account {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -2622,6 +2648,7 @@ pub mod configure_account {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -2636,6 +2663,7 @@ pub mod configure_account {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -2654,6 +2682,7 @@ pub mod configure_account {
         )]
         pub margin_rate: Option<f32>,
     }
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {
@@ -2665,6 +2694,7 @@ pub mod configure_account {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -2673,7 +2703,6 @@ pub mod configure_account {
 
     /// Configure Account
     /// Set the client-configurable portions of an Account.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct ConfigureAccountRequest {
         #[serde(skip_serializing)]
@@ -2795,12 +2824,11 @@ pub mod configure_account {
 }
 
 pub mod get_account_changes {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -2813,6 +2841,7 @@ pub mod get_account_changes {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -2827,6 +2856,7 @@ pub mod get_account_changes {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -2835,6 +2865,7 @@ pub mod get_account_changes {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -2846,6 +2877,7 @@ pub mod get_account_changes {
         #[serde(rename = "sinceTransactionID", skip_serializing_if = "Option::is_none")]
         pub since_transaction_id: Option<String>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {
@@ -2857,7 +2889,6 @@ pub mod get_account_changes {
     /// Poll Account Updates
     /// Endpoint used to poll an Account for its current state and changes
     /// since a specified TransactionID.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetAccountChangesRequest {
         #[serde(skip_serializing)]
@@ -2975,12 +3006,11 @@ pub mod get_account_changes {
 }
 
 pub mod list_transactions {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+    use chrono::prelude::*;
+
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -2993,6 +3023,7 @@ pub mod list_transactions {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -3007,6 +3038,7 @@ pub mod list_transactions {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -3015,6 +3047,7 @@ pub mod list_transactions {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -3043,6 +3076,7 @@ pub mod list_transactions {
         #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
         pub otype: Option<Vec<String>>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {
@@ -3057,7 +3091,6 @@ pub mod list_transactions {
     /// List Transactions
     /// Get a list of Transactions pages that satisfy a time-based Transaction
     /// query.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct ListTransactionsRequest {
         #[serde(skip_serializing)]
@@ -3238,12 +3271,11 @@ pub mod list_transactions {
 }
 
 pub mod get_transaction {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -3256,6 +3288,7 @@ pub mod get_transaction {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -3273,6 +3306,7 @@ pub mod get_transaction {
         #[serde(rename = "transactionID", skip_serializing_if = "Option::is_none")]
         pub transaction_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath {
@@ -3284,6 +3318,7 @@ pub mod get_transaction {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -3292,6 +3327,7 @@ pub mod get_transaction {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -3300,7 +3336,6 @@ pub mod get_transaction {
 
     /// Transaction Details
     /// Get the details of a single Account Transaction.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetTransactionRequest {
         #[serde(skip_serializing)]
@@ -3410,12 +3445,11 @@ pub mod get_transaction {
 }
 
 pub mod get_transaction_range {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -3428,6 +3462,7 @@ pub mod get_transaction_range {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -3442,6 +3477,7 @@ pub mod get_transaction_range {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -3450,6 +3486,7 @@ pub mod get_transaction_range {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -3467,6 +3504,7 @@ pub mod get_transaction_range {
         #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
         pub otype: Option<Vec<String>>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {
@@ -3480,7 +3518,6 @@ pub mod get_transaction_range {
     /// Transaction ID Range
     /// Get a range of Transactions for an Account based on the Transaction
     /// IDs.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetTransactionRangeRequest {
         #[serde(skip_serializing)]
@@ -3608,12 +3645,11 @@ pub mod get_transaction_range {
 }
 
 pub mod get_transactions_since_id {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -3626,6 +3662,7 @@ pub mod get_transactions_since_id {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -3640,6 +3677,7 @@ pub mod get_transactions_since_id {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -3648,6 +3686,7 @@ pub mod get_transactions_since_id {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -3659,6 +3698,7 @@ pub mod get_transactions_since_id {
         #[serde(rename = "id", skip_serializing_if = "Option::is_none")]
         pub id: Option<String>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery { id: None }
@@ -3668,7 +3708,6 @@ pub mod get_transactions_since_id {
     /// Transactions Since ID
     /// Get a range of Transactions for an Account starting at (but not
     /// including) a provided Transaction ID.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetTransactionsSinceIdRequest {
         #[serde(skip_serializing)]
@@ -3780,18 +3819,18 @@ pub mod get_transactions_since_id {
 }
 
 pub mod stream_transactions {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
         #[serde(rename = "Authorization", skip_serializing_if = "Option::is_none")]
         pub authorization: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -3805,6 +3844,7 @@ pub mod stream_transactions {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -3813,6 +3853,7 @@ pub mod stream_transactions {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -3821,6 +3862,7 @@ pub mod stream_transactions {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -3830,7 +3872,6 @@ pub mod stream_transactions {
     /// Transaction Stream
     /// Get a stream of Transactions for an Account starting from when the
     /// request is made.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct StreamTransactionsRequest {
         #[serde(skip_serializing)]
@@ -3922,12 +3963,11 @@ pub mod stream_transactions {
 }
 
 pub mod get_prices {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+    use chrono::prelude::*;
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -3940,6 +3980,7 @@ pub mod get_prices {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -3954,6 +3995,7 @@ pub mod get_prices {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -3962,6 +4004,7 @@ pub mod get_prices {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -3992,6 +4035,7 @@ pub mod get_prices {
         )]
         pub include_home_conversions: Option<bool>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {
@@ -4006,7 +4050,6 @@ pub mod get_prices {
     /// Current Account Prices
     /// Get pricing information for a specified list of Instruments within an
     /// Account.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetPricesRequest {
         #[serde(skip_serializing)]
@@ -4165,12 +4208,11 @@ pub mod get_prices {
 }
 
 pub mod stream_pricing {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -4183,6 +4225,7 @@ pub mod stream_pricing {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -4197,6 +4240,7 @@ pub mod stream_pricing {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -4205,6 +4249,7 @@ pub mod stream_pricing {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -4219,6 +4264,7 @@ pub mod stream_pricing {
         #[serde(rename = "snapshot", skip_serializing_if = "Option::is_none")]
         pub snapshot: Option<bool>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {
@@ -4241,7 +4287,6 @@ pub mod stream_pricing {
     /// same way (i.e. they are not all aligned to the top of the second).
     /// This means that during periods of rapid price movement, different
     /// subscribers may observe different prices depending on their alignment.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct StreamPricingRequest {
         #[serde(skip_serializing)]
@@ -4360,12 +4405,11 @@ pub mod stream_pricing {
 }
 
 pub mod get_account_instrument_candles {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+    use chrono::prelude::*;
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -4378,6 +4422,7 @@ pub mod get_account_instrument_candles {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -4392,6 +4437,7 @@ pub mod get_account_instrument_candles {
         #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
         pub instrument: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { instrument: None }
@@ -4400,6 +4446,7 @@ pub mod get_account_instrument_candles {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -4453,6 +4500,7 @@ pub mod get_account_instrument_candles {
         )]
         pub units: Option<f32>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {
@@ -4473,7 +4521,6 @@ pub mod get_account_instrument_candles {
 
     /// Get Candlesticks
     /// Fetch candlestick data for an instrument.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetAccountInstrumentCandlesRequest {
         #[serde(skip_serializing)]
@@ -4698,12 +4745,11 @@ pub mod get_account_instrument_candles {
 }
 
 pub mod create_market_order {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -4716,6 +4762,7 @@ pub mod create_market_order {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -4730,6 +4777,7 @@ pub mod create_market_order {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -4741,6 +4789,7 @@ pub mod create_market_order {
         #[serde(rename = "order", skip_serializing_if = "Option::is_none")]
         pub order: Option<MarketOrder>,
     }
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody { order: None }
@@ -4749,6 +4798,7 @@ pub mod create_market_order {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -4757,7 +4807,6 @@ pub mod create_market_order {
 
     /// Create Order
     /// Create an Order for an Account
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct CreateMarketOrderRequest {
         #[serde(skip_serializing)]
@@ -4906,12 +4955,11 @@ pub mod create_market_order {
 }
 
 pub mod create_limit_order {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -4924,6 +4972,7 @@ pub mod create_limit_order {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -4938,6 +4987,7 @@ pub mod create_limit_order {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -4949,6 +4999,7 @@ pub mod create_limit_order {
         #[serde(rename = "order", skip_serializing_if = "Option::is_none")]
         pub order: Option<LimitOrder>,
     }
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody { order: None }
@@ -4957,6 +5008,7 @@ pub mod create_limit_order {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -4965,7 +5017,6 @@ pub mod create_limit_order {
 
     /// Create Order
     /// Create an Order for an Account
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct CreateLimitOrderRequest {
         #[serde(skip_serializing)]
@@ -5114,12 +5165,11 @@ pub mod create_limit_order {
 }
 
 pub mod create_stop_order {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -5132,6 +5182,7 @@ pub mod create_stop_order {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -5146,6 +5197,7 @@ pub mod create_stop_order {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -5157,6 +5209,7 @@ pub mod create_stop_order {
         #[serde(rename = "order", skip_serializing_if = "Option::is_none")]
         pub order: Option<StopOrder>,
     }
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody { order: None }
@@ -5165,6 +5218,7 @@ pub mod create_stop_order {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -5173,7 +5227,6 @@ pub mod create_stop_order {
 
     /// Create Order
     /// Create an Order for an Account
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct CreateStopOrderRequest {
         #[serde(skip_serializing)]
@@ -5322,12 +5375,11 @@ pub mod create_stop_order {
 }
 
 pub mod list_orders {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -5340,6 +5392,7 @@ pub mod list_orders {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -5354,6 +5407,7 @@ pub mod list_orders {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -5362,6 +5416,7 @@ pub mod list_orders {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -5385,6 +5440,7 @@ pub mod list_orders {
         #[serde(rename = "beforeID", skip_serializing_if = "Option::is_none")]
         pub before_id: Option<String>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {
@@ -5399,7 +5455,6 @@ pub mod list_orders {
 
     /// List Orders
     /// Get a list of Orders for an Account
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct ListOrdersRequest {
         #[serde(skip_serializing)]
@@ -5547,12 +5602,11 @@ pub mod list_orders {
 }
 
 pub mod list_pending_orders {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -5565,6 +5619,7 @@ pub mod list_pending_orders {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -5579,6 +5634,7 @@ pub mod list_pending_orders {
         #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
         pub account_id: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { account_id: None }
@@ -5587,6 +5643,7 @@ pub mod list_pending_orders {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -5595,6 +5652,7 @@ pub mod list_pending_orders {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -5603,7 +5661,6 @@ pub mod list_pending_orders {
 
     /// Pending Orders
     /// List all pending Orders in an Account
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct ListPendingOrdersRequest {
         #[serde(skip_serializing)]
@@ -5702,12 +5759,11 @@ pub mod list_pending_orders {
 }
 
 pub mod get_order {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -5720,6 +5776,7 @@ pub mod get_order {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -5737,6 +5794,7 @@ pub mod get_order {
         #[serde(rename = "orderSpecifier", skip_serializing_if = "Option::is_none")]
         pub order_specifier: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath {
@@ -5748,6 +5806,7 @@ pub mod get_order {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -5756,6 +5815,7 @@ pub mod get_order {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -5764,7 +5824,6 @@ pub mod get_order {
 
     /// Get Order
     /// Get details for a single Order in an Account
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetOrderRequest {
         #[serde(skip_serializing)]
@@ -5878,12 +5937,11 @@ pub mod get_order {
 }
 
 pub mod replace_order {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -5899,6 +5957,7 @@ pub mod replace_order {
         #[serde(rename = "ClientRequestID", skip_serializing_if = "Option::is_none")]
         pub client_request_id: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -5917,6 +5976,7 @@ pub mod replace_order {
         #[serde(rename = "orderSpecifier", skip_serializing_if = "Option::is_none")]
         pub order_specifier: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath {
@@ -5931,6 +5991,7 @@ pub mod replace_order {
         #[serde(rename = "order", skip_serializing_if = "Option::is_none")]
         pub order: Option<OrderRequest>,
     }
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody { order: None }
@@ -5939,6 +6000,7 @@ pub mod replace_order {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -5948,7 +6010,6 @@ pub mod replace_order {
     /// Replace Order
     /// Replace an Order in an Account by simultaneously cancelling it and
     /// creating a replacement Order
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct ReplaceOrderRequest {
         #[serde(skip_serializing)]
@@ -6125,12 +6186,11 @@ pub mod replace_order {
 }
 
 pub mod cancel_order {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -6146,6 +6206,7 @@ pub mod cancel_order {
         #[serde(rename = "ClientRequestID", skip_serializing_if = "Option::is_none")]
         pub client_request_id: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -6164,6 +6225,7 @@ pub mod cancel_order {
         #[serde(rename = "orderSpecifier", skip_serializing_if = "Option::is_none")]
         pub order_specifier: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath {
@@ -6175,6 +6237,7 @@ pub mod cancel_order {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -6183,6 +6246,7 @@ pub mod cancel_order {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -6191,7 +6255,6 @@ pub mod cancel_order {
 
     /// Cancel Order
     /// Cancel a pending Order in an Account
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct CancelOrderRequest {
         #[serde(skip_serializing)]
@@ -6321,12 +6384,11 @@ pub mod cancel_order {
 }
 
 pub mod set_order_client_extensions {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -6339,6 +6401,7 @@ pub mod set_order_client_extensions {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -6356,6 +6419,7 @@ pub mod set_order_client_extensions {
         #[serde(rename = "orderSpecifier", skip_serializing_if = "Option::is_none")]
         pub order_specifier: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath {
@@ -6376,6 +6440,7 @@ pub mod set_order_client_extensions {
         )]
         pub trade_client_extensions: Option<ClientExtensions>,
     }
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {
@@ -6387,6 +6452,7 @@ pub mod set_order_client_extensions {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestQuery {}
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {}
@@ -6397,7 +6463,6 @@ pub mod set_order_client_extensions {
     /// Update the Client Extensions for an Order in an Account. Do not set,
     /// modify, or delete clientExtensions if your account is associated with
     /// MT4.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct SetOrderClientExtensionsRequest {
         #[serde(skip_serializing)]
@@ -6543,36 +6608,37 @@ pub mod set_order_client_extensions {
         pub related_transaction_i_ds: Option<Vec<String>>,
     }
 }
-pub use crate::cancel_order::*;
-pub use crate::close_position::*;
-pub use crate::close_trade::*;
-pub use crate::configure_account::*;
-pub use crate::create_limit_order::*;
-pub use crate::create_market_order::*;
-pub use crate::create_stop_order::*;
-pub use crate::get_account::*;
-pub use crate::get_account_changes::*;
-pub use crate::get_account_instrument_candles::*;
-pub use crate::get_account_instruments::*;
-pub use crate::get_account_summary::*;
-pub use crate::get_order::*;
-pub use crate::get_position::*;
-pub use crate::get_prices::*;
-pub use crate::get_trade::*;
-pub use crate::get_transaction::*;
-pub use crate::get_transaction_range::*;
-pub use crate::get_transactions_since_id::*;
-pub use crate::list_accounts::*;
-pub use crate::list_open_positions::*;
-pub use crate::list_open_trades::*;
-pub use crate::list_orders::*;
-pub use crate::list_pending_orders::*;
-pub use crate::list_positions::*;
-pub use crate::list_trades::*;
-pub use crate::list_transactions::*;
-pub use crate::replace_order::*;
-pub use crate::set_order_client_extensions::*;
-pub use crate::set_trade_client_extensions::*;
-pub use crate::set_trade_dependent_orders::*;
-pub use crate::stream_pricing::*;
-pub use crate::stream_transactions::*;
+
+pub use cancel_order::*;
+pub use close_position::*;
+pub use close_trade::*;
+pub use configure_account::*;
+pub use create_limit_order::*;
+pub use create_market_order::*;
+pub use create_stop_order::*;
+pub use get_account::*;
+pub use get_account_changes::*;
+pub use get_account_instrument_candles::*;
+pub use get_account_instruments::*;
+pub use get_account_summary::*;
+pub use get_order::*;
+pub use get_position::*;
+pub use get_prices::*;
+pub use get_trade::*;
+pub use get_transaction::*;
+pub use get_transaction_range::*;
+pub use get_transactions_since_id::*;
+pub use list_accounts::*;
+pub use list_open_positions::*;
+pub use list_open_trades::*;
+pub use list_orders::*;
+pub use list_pending_orders::*;
+pub use list_positions::*;
+pub use list_trades::*;
+pub use list_transactions::*;
+pub use replace_order::*;
+pub use set_order_client_extensions::*;
+pub use set_trade_client_extensions::*;
+pub use set_trade_dependent_orders::*;
+pub use stream_pricing::*;
+pub use stream_transactions::*;

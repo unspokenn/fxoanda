@@ -1,10 +1,9 @@
 pub mod get_instrument_candles {
-    #[allow(unused_imports)]
     use chrono::prelude::*;
-    #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
     use crate::Client;
+    use serde::{Serialize, Deserialize};
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -17,6 +16,7 @@ pub mod get_instrument_candles {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -31,6 +31,7 @@ pub mod get_instrument_candles {
         #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
         pub instrument: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { instrument: None }
@@ -39,6 +40,7 @@ pub mod get_instrument_candles {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -85,6 +87,7 @@ pub mod get_instrument_candles {
         #[serde(rename = "weeklyAlignment", skip_serializing_if = "Option::is_none")]
         pub weekly_alignment: Option<String>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {
@@ -104,7 +107,6 @@ pub mod get_instrument_candles {
 
     /// Get Candlesticks
     /// Fetch candlestick data for an instrument.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetInstrumentCandlesRequest {
         #[serde(skip_serializing)]
@@ -175,9 +177,9 @@ pub mod get_instrument_candles {
             self
         }
 
-        /// The number of candlesticks to return in the reponse. Count should not
+        /// The number of candlesticks to return in the response. Count should not
         /// be specified if both the start and end parameters are provided, as the
-        /// time range combined with the graularity will determine the number of
+        /// time range combined with the granularity will determine the number of
         /// candlesticks to return.
         /// - param i32
         /// - return GetInstrumentCandlesRequest
@@ -318,12 +320,11 @@ pub mod get_instrument_candles {
 }
 
 pub mod get_instrument_price {
-    #[allow(unused_imports)]
     use chrono::prelude::*;
-    #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
     use crate::Client;
+    use serde::{Serialize, Deserialize};
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -336,6 +337,7 @@ pub mod get_instrument_price {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -350,6 +352,7 @@ pub mod get_instrument_price {
         #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
         pub instrument: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { instrument: None }
@@ -358,6 +361,7 @@ pub mod get_instrument_price {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -373,6 +377,7 @@ pub mod get_instrument_price {
         )]
         pub time: Option<DateTime<Utc>>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery { time: None }
@@ -382,7 +387,6 @@ pub mod get_instrument_price {
     /// Price
     /// Fetch a price for an instrument. Accounts are not associated in any
     /// way with this endpoint.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetInstrumentPriceRequest {
         #[serde(skip_serializing)]
@@ -492,12 +496,11 @@ pub mod get_instrument_price {
 }
 
 pub mod get_instrument_price_range {
-    #[allow(unused_imports)]
     use chrono::prelude::*;
-    #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
     use crate::Client;
+    use serde::{Serialize, Deserialize};
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -510,6 +513,7 @@ pub mod get_instrument_price_range {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -524,6 +528,7 @@ pub mod get_instrument_price_range {
         #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
         pub instrument: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { instrument: None }
@@ -532,6 +537,7 @@ pub mod get_instrument_price_range {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -554,6 +560,7 @@ pub mod get_instrument_price_range {
         )]
         pub to: Option<DateTime<Utc>>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {
@@ -566,7 +573,6 @@ pub mod get_instrument_price_range {
     /// Get Prices
     /// Fetch a range of prices for an instrument. Accounts are not associated
     /// in any way with this endpoint.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetInstrumentPriceRangeRequest {
         #[serde(skip_serializing)]
@@ -696,12 +702,11 @@ pub mod get_instrument_price_range {
 }
 
 pub mod get_order_book {
-    #[allow(unused_imports)]
     use chrono::prelude::*;
-    #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
     use crate::Client;
+    use serde::{Serialize, Deserialize};
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -714,6 +719,7 @@ pub mod get_order_book {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -728,6 +734,7 @@ pub mod get_order_book {
         #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
         pub instrument: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { instrument: None }
@@ -736,6 +743,7 @@ pub mod get_order_book {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -751,6 +759,7 @@ pub mod get_order_book {
         )]
         pub time: Option<DateTime<Utc>>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery { time: None }
@@ -759,7 +768,6 @@ pub mod get_order_book {
 
     /// Get Order Book
     /// Fetch an order book for an instrument.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetOrderBookRequest {
         #[serde(skip_serializing)]
@@ -875,12 +883,11 @@ pub mod get_order_book {
 }
 
 pub mod get_position_book {
-    #[allow(unused_imports)]
     use chrono::prelude::*;
-    #[allow(unused_imports)]
     use fxoanda_definitions::*;
     use std::error::Error;
     use crate::Client;
+    use serde::{Serialize, Deserialize};
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -893,6 +900,7 @@ pub mod get_position_book {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -907,6 +915,7 @@ pub mod get_position_book {
         #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
         pub instrument: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { instrument: None }
@@ -915,6 +924,7 @@ pub mod get_position_book {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -930,6 +940,7 @@ pub mod get_position_book {
         )]
         pub time: Option<DateTime<Utc>>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery { time: None }
@@ -938,7 +949,6 @@ pub mod get_position_book {
 
     /// Get Position Book
     /// Fetch a position book for an instrument.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetPositionBookRequest {
         #[serde(skip_serializing)]
@@ -1052,8 +1062,9 @@ pub mod get_position_book {
         pub position_book: Option<PositionBook>,
     }
 }
-pub use crate::get_instrument_candles::*;
-pub use crate::get_instrument_price::*;
-pub use crate::get_instrument_price_range::*;
-pub use crate::get_order_book::*;
-pub use crate::get_position_book::*;
+
+pub use get_instrument_candles::*;
+pub use get_instrument_price::*;
+pub use get_instrument_price_range::*;
+pub use get_order_book::*;
+pub use get_position_book::*;

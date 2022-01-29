@@ -1,10 +1,9 @@
 pub mod get_base_prices {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+    use chrono::prelude::*;
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -17,6 +16,7 @@ pub mod get_base_prices {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -28,6 +28,7 @@ pub mod get_base_prices {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestPath {}
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath {}
@@ -36,6 +37,7 @@ pub mod get_base_prices {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -51,6 +53,7 @@ pub mod get_base_prices {
         )]
         pub time: Option<DateTime<Utc>>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery { time: None }
@@ -60,7 +63,6 @@ pub mod get_base_prices {
     /// Get Base Prices
     /// Get pricing information for a specified instrument. Accounts are not
     /// associated in any way with this endpoint.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetBasePricesRequest {
         #[serde(skip_serializing)]
@@ -158,12 +160,11 @@ pub mod get_base_prices {
 }
 
 pub mod get_price_range {
-    #[allow(unused_imports)]
-    use chrono::prelude::*;
-    #[allow(unused_imports)]
-    use fxoanda_definitions::*;
-    use std::error::Error;
     use crate::Client;
+    use chrono::prelude::*;
+    use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
+    use std::error::Error;
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -176,6 +177,7 @@ pub mod get_price_range {
         )]
         pub accept_datetime_format: Option<String>,
     }
+
     impl RequestHead {
         fn new() -> RequestHead {
             RequestHead {
@@ -190,6 +192,7 @@ pub mod get_price_range {
         #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
         pub instrument: Option<String>,
     }
+
     impl RequestPath {
         fn new() -> RequestPath {
             RequestPath { instrument: None }
@@ -198,6 +201,7 @@ pub mod get_price_range {
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestBody {}
+
     impl RequestBody {
         fn new() -> RequestBody {
             RequestBody {}
@@ -220,6 +224,7 @@ pub mod get_price_range {
         )]
         pub to: Option<DateTime<Utc>>,
     }
+
     impl RequestQuery {
         fn new() -> RequestQuery {
             RequestQuery {
@@ -232,7 +237,6 @@ pub mod get_price_range {
     /// Get Price Range
     /// Get pricing information for a specified range of prices. Accounts are
     /// not associated in any way with this endpoint.
-
     #[derive(Debug, Serialize, Deserialize)]
     pub struct GetPriceRangeRequest {
         #[serde(skip_serializing)]
@@ -357,5 +361,6 @@ pub mod get_price_range {
         pub prices: Option<Vec<Price>>,
     }
 }
-pub use crate::get_base_prices::*;
-pub use crate::get_price_range::*;
+
+pub use get_base_prices::*;
+pub use get_price_range::*;

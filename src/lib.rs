@@ -49,18 +49,6 @@
 //!
 
 #![crate_type = "lib"]
-#[allow(unused_imports)]
-#[macro_use]
-extern crate serde_derive;
-//#[macro_use]
-extern crate serde;
-//#[macro_use]
-extern crate chrono;
-extern crate fxoanda_definitions;
-extern crate fxoanda_serdes;
-extern crate serde_json;
-extern crate time;
-
 pub mod account;
 pub mod client;
 pub mod instrument;
