@@ -4200,6 +4200,11 @@
           "description": "The maximum trailing stop distance allowed for a trailing stop loss created for this instrument. Specified in price units.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
+        "minimumGuaranteedStopLossDistance": {
+          "type": "string",
+          "description": "The minimum distance allowed between the Trade’s fill price and the configured price for guaranteed Stop Loss Orders created for this instrument. Specified in price units.",
+          "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
+        },
         "minimumTrailingStopDistance": {
           "type": "string",
           "description": "The minimum trailing stop distance allowed for a trailing stop loss created for this instrument. Specified in price units.",
@@ -4222,6 +4227,27 @@
         },
         "commission": {
           "$ref": "#/definitions/InstrumentCommission"
+        },
+        "guaranteedStopLossOrderMode": {
+          "$ref": "#/definitions/GuaranteedStopLossOrderModeForInstrument"
+        },
+        "guaranteedStopLossOrderExecutionPremium": {
+          "type": "string",
+          "description": "The amount that is charged to the account if a guaranteed Stop Loss Order is triggered and filled. The value is in price units and is charged for each unit of the Trade. This field will only be present if the Account’s guaranteedStopLossOrderMode for this Instrument is not ‘DISABLED’.",
+          "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
+        },
+        "guaranteedStopLossOrderLevelRestriction": {
+          "$ref": "#/definitions/GuaranteedStopLossOrderLevelRestriction"
+        },
+        "financing": {
+          "$ref": "#/definitions/InstrumentFinancing"
+        },
+        "tags": {
+          "type": "array",
+          "description": "The tags associated with this instrument.",
+          "items": {
+            "$ref": "#/definitions/Tag"
+          }
         }
       }
     },
@@ -4258,6 +4284,74 @@
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         }
       }
+    },
+    "GuaranteedStopLossOrderModeForInstrument": {
+      "type": "string",
+      "description": "The overall behaviour of the Account regarding Guaranteed Stop Loss Orders for a specific Instrument.",
+      "enum": [
+        "DISABLED",
+        "ALLOWED",
+        "REQUIRED"
+      ]
+    },
+    "InstrumentFinancing": {
+      "type": "object",
+      "description": "Financing data for this instrument.",
+      "properties": {
+        "longRate": {
+          "type": "string",
+          "description": "The financing rate to be used for a long position for the instrument. The value is in decimal rather than percentage points, i.e. 5% is represented as 0.05.",
+          "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
+        },
+        "shortRate": {
+          "type": "string",
+          "description": "The financing rate to be used for a short position for the instrument. The value is in decimal rather than percentage points, i.e. 5% is represented as 0.05.",
+          "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
+        },
+        "financingDaysOfWeek": {
+          "$ref": "#/definitions/FinancingDayOfWeek"
+        }
+      }
+    },
+    "Tag": {
+      "type": "object",
+      "description": "A tag associated with an entity.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "The type of the tag."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the tag."
+        }
+      }
+    },
+    "FinancingDayOfWeek": {
+      "type": "object",
+      "description": "A FinancingDayOfWeek message defines a day of the week when financing charges are debited or credited.",
+      "properties": {
+        "dayOfWeek": {
+          "$ref": "#/definitions/DayOfWeek"
+        },
+        "daysCharged": {
+          "type": "integer",
+          "description": "The number of days worth of financing to be charged on dayOfWeek."
+        }
+      }
+    },
+    "DayOfWeek": {
+      "type": "string",
+      "description": "The DayOfWeek provides a representation of the day of the week.",
+      "enum": [
+        "SUNDAY",
+        "MONDAY",
+        "TUESDAY",
+        "WEDNESDAY",
+        "THURSDAY",
+        "FRIDAY",
+        "SATURDAY"
+      ]
     },
     "GuaranteedStopLossOrderLevelRestriction": {
       "type": "object",
@@ -11746,15 +11840,6 @@
           "description": "The date/time when the Price was created",
           "format": "The RFC 3339 representation is a string conforming to https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a string representing the number of seconds since the Unix Epoch (January 1st, 1970 at UTC). The value is a fractional number, where the fractional part represents a fraction of a second (up to nine decimal places)."
         },
-        "status": {
-          "type": "string",
-          "description": "The status of the Price.",
-          "enum": [
-            "tradeable",
-            "non-tradeable",
-            "invalid"
-          ]
-        },
         "tradeable": {
           "type": "boolean",
           "description": "Flag indicating if the Price is tradeable or not"
@@ -11782,12 +11867,6 @@
           "type": "string",
           "description": "The closeout ask Price. This Price is used when a ask is required to closeout a Position (margin closeout or manual) yet there is no ask liquidity. The closeout ask is never used to open a new position.",
           "format": "A decimal number encodes as a string. The amount of precision provided depends on the Instrument."
-        },
-        "quoteHomeConversionFactors": {
-          "$ref": "#/definitions/QuoteHomeConversionFactors"
-        },
-        "unitsAvailable": {
-          "$ref": "#/definitions/UnitsAvailable"
         }
       }
     },
@@ -11799,22 +11878,6 @@
         "non-tradeable",
         "invalid"
       ]
-    },
-    "QuoteHomeConversionFactors": {
-      "type": "object",
-      "description": "QuoteHomeConversionFactors represents the factors that can be used used to convert quantities of a Price's Instrument's quote currency into the Account's home currency.",
-      "properties": {
-        "positiveUnits": {
-          "type": "string",
-          "description": "The factor used to convert a positive amount of the Price's Instrument's quote currency into a positive amount of the Account's home currency.  Conversion is performed by multiplying the quote units by the conversion factor.",
-          "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
-        },
-        "negativeUnits": {
-          "type": "string",
-          "description": "The factor used to convert a negative amount of the Price's Instrument's quote currency into a negative amount of the Account's home currency.  Conversion is performed by multiplying the quote units by the conversion factor.",
-          "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
-        }
-      }
     },
     "HomeConversions": {
       "type": "object",
@@ -11848,6 +11911,7 @@
       "properties": {
         "type": {
           "type": "string",
+          "default": "HEARTBEAT",
           "description": "The string \"HEARTBEAT\""
         },
         "time": {
@@ -13745,24 +13809,6 @@
           "type": "string",
           "description": "The units available for short Orders.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
-        }
-      }
-    },
-    "UnitsAvailable": {
-      "type": "object",
-      "description": "Representation of how many units of an Instrument are available to be traded by an Order depending on its postionFill option.",
-      "properties": {
-        "default": {
-          "$ref": "#/definitions/UnitsAvailableDetails"
-        },
-        "reduceFirst": {
-          "$ref": "#/definitions/UnitsAvailableDetails"
-        },
-        "reduceOnly": {
-          "$ref": "#/definitions/UnitsAvailableDetails"
-        },
-        "openOnly": {
-          "$ref": "#/definitions/UnitsAvailableDetails"
         }
       }
     },

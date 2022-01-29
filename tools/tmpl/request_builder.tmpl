@@ -1,10 +1,9 @@
 
 pub mod {{ snake }}{
-	#[allow(unused_imports)]
 	use chrono::prelude::*;
 	use std::error::Error;
-	use Client;
-	#[allow(unused_imports)]
+	use crate::Client;
+    use serde::{Serialize, Deserialize};
 	use fxoanda_definitions::*;
 
 	{% for key, name in [('header','Head'),('path','Path'),('body','Body'),('query','Query')] %}
