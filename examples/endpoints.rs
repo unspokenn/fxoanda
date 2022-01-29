@@ -1,4 +1,3 @@
-extern crate fxoanda;
 use fxoanda::*;
 use std::env;
 
