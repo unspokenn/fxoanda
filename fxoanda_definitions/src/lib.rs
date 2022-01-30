@@ -2980,14 +2980,15 @@ pub struct InstrumentFinancing {
     )]
     pub short_rate: Option<f32>,
 
-    /// A FinancingDayOfWeek message defines a day of the week when financing
-    /// charges are debited or credited.
+    /// The days of the week to debit or credit financing charges; the exact
+    /// time of day at which to charge the financing is set in the
+    /// DivisionTradingGroup for the client’s account.
     #[serde(default)]
     #[serde(
         rename = "financingDaysOfWeek",
         skip_serializing_if = "Option::is_none"
     )]
-    pub financing_days_of_week: Option<FinancingDayOfWeek>,
+    pub financing_days_of_week: Option<Vec<FinancingDayOfWeek>>,
 }
 
 impl InstrumentFinancing {
@@ -3023,11 +3024,12 @@ impl InstrumentFinancing {
         self
     }
 
-    /// A FinancingDayOfWeek message defines a day of the week when financing
-    /// charges are debited or credited.
-    /// - param FinancingDayOfWeek
+    /// The days of the week to debit or credit financing charges; the exact
+    /// time of day at which to charge the financing is set in the
+    /// DivisionTradingGroup for the client’s account.
+    /// - param Vec<FinancingDayOfWeek>
     /// - return InstrumentFinancing
-    pub fn with_financing_days_of_week(mut self, x: FinancingDayOfWeek) -> Self {
+    pub fn with_financing_days_of_week(mut self, x: Vec<FinancingDayOfWeek>) -> Self {
         self.financing_days_of_week = Some(x);
         self
     }
@@ -3254,7 +3256,7 @@ pub struct Account {
 
     /// The home currency of the Account
     /// format: A string containing an ISO 4217 currency
-    /// (http://en.wikipedia.org/wiki/ISO_4217)
+    /// (https://en.wikipedia.org/wiki/ISO_4217)
     #[serde(default)]
     #[serde(rename = "currency", skip_serializing_if = "Option::is_none")]
     pub currency: Option<String>,
@@ -3698,7 +3700,7 @@ impl Account {
 
     /// The home currency of the Account
     /// format: A string containing an ISO 4217 currency
-    /// (http://en.wikipedia.org/wiki/ISO_4217)
+    /// (https://en.wikipedia.org/wiki/ISO_4217)
     /// - param String
     /// - return Account
     pub fn with_currency(mut self, x: String) -> Self {
@@ -4538,7 +4540,7 @@ pub struct AccountSummary {
 
     /// The home currency of the Account
     /// format: A string containing an ISO 4217 currency
-    /// (http://en.wikipedia.org/wiki/ISO_4217)
+    /// (https://en.wikipedia.org/wiki/ISO_4217)
     #[serde(default)]
     #[serde(rename = "currency", skip_serializing_if = "Option::is_none")]
     pub currency: Option<String>,
@@ -4964,7 +4966,7 @@ impl AccountSummary {
 
     /// The home currency of the Account
     /// format: A string containing an ISO 4217 currency
-    /// (http://en.wikipedia.org/wiki/ISO_4217)
+    /// (https://en.wikipedia.org/wiki/ISO_4217)
     /// - param String
     /// - return AccountSummary
     pub fn with_currency(mut self, x: String) -> Self {
@@ -6154,7 +6156,7 @@ pub struct CreateTransaction {
 
     /// The home currency of the Account
     /// format: A string containing an ISO 4217 currency
-    /// (http://en.wikipedia.org/wiki/ISO_4217)
+    /// (https://en.wikipedia.org/wiki/ISO_4217)
     #[serde(default)]
     #[serde(rename = "homeCurrency", skip_serializing_if = "Option::is_none")]
     pub home_currency: Option<String>,
@@ -6280,7 +6282,7 @@ impl CreateTransaction {
 
     /// The home currency of the Account
     /// format: A string containing an ISO 4217 currency
-    /// (http://en.wikipedia.org/wiki/ISO_4217)
+    /// (https://en.wikipedia.org/wiki/ISO_4217)
     /// - param String
     /// - return CreateTransaction
     pub fn with_home_currency(mut self, x: String) -> Self {
@@ -7492,7 +7494,7 @@ pub struct MarketOrderTransaction {
     #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
     pub instrument: Option<String>,
 
-    /// The quantity requested to be filled by the Market Order. A posititive
+    /// The quantity requested to be filled by the Market Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -7726,7 +7728,7 @@ impl MarketOrderTransaction {
         self
     }
 
-    /// The quantity requested to be filled by the Market Order. A posititive
+    /// The quantity requested to be filled by the Market Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -7938,7 +7940,7 @@ pub struct MarketOrderRejectTransaction {
     #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
     pub instrument: Option<String>,
 
-    /// The quantity requested to be filled by the Market Order. A posititive
+    /// The quantity requested to be filled by the Market Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -8178,7 +8180,7 @@ impl MarketOrderRejectTransaction {
         self
     }
 
-    /// The quantity requested to be filled by the Market Order. A posititive
+    /// The quantity requested to be filled by the Market Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -8399,7 +8401,7 @@ pub struct FixedPriceOrderTransaction {
     pub instrument: Option<String>,
 
     /// The quantity requested to be filled by the Fixed Price Order. A
-    /// posititive number of units results in a long Order, and a negative
+    /// positive number of units results in a long Order, and a negative
     /// number of units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
     /// depends on what the number represents.
@@ -8589,7 +8591,7 @@ impl FixedPriceOrderTransaction {
     }
 
     /// The quantity requested to be filled by the Fixed Price Order. A
-    /// posititive number of units results in a long Order, and a negative
+    /// positive number of units results in a long Order, and a negative
     /// number of units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
     /// depends on what the number represents.
@@ -8778,7 +8780,7 @@ pub struct LimitOrderTransaction {
     #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
     pub instrument: Option<String>,
 
-    /// The quantity requested to be filled by the Limit Order. A posititive
+    /// The quantity requested to be filled by the Limit Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -9029,7 +9031,7 @@ impl LimitOrderTransaction {
         self
     }
 
-    /// The quantity requested to be filled by the Limit Order. A posititive
+    /// The quantity requested to be filled by the Limit Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -9255,7 +9257,7 @@ pub struct LimitOrderRejectTransaction {
     #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
     pub instrument: Option<String>,
 
-    /// The quantity requested to be filled by the Limit Order. A posititive
+    /// The quantity requested to be filled by the Limit Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -9504,7 +9506,7 @@ impl LimitOrderRejectTransaction {
         self
     }
 
-    /// The quantity requested to be filled by the Limit Order. A posititive
+    /// The quantity requested to be filled by the Limit Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -9754,7 +9756,7 @@ pub struct StopOrderTransaction {
     #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
     pub instrument: Option<String>,
 
-    /// The quantity requested to be filled by the Stop Order. A posititive
+    /// The quantity requested to be filled by the Stop Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -10019,7 +10021,7 @@ impl StopOrderTransaction {
         self
     }
 
-    /// The quantity requested to be filled by the Stop Order. A posititive
+    /// The quantity requested to be filled by the Stop Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -10257,7 +10259,7 @@ pub struct StopOrderRejectTransaction {
     #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
     pub instrument: Option<String>,
 
-    /// The quantity requested to be filled by the Stop Order. A posititive
+    /// The quantity requested to be filled by the Stop Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -10520,7 +10522,7 @@ impl StopOrderRejectTransaction {
         self
     }
 
-    /// The quantity requested to be filled by the Stop Order. A posititive
+    /// The quantity requested to be filled by the Stop Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -10783,7 +10785,7 @@ pub struct MarketIfTouchedOrderTransaction {
     pub instrument: Option<String>,
 
     /// The quantity requested to be filled by the MarketIfTouched Order. A
-    /// posititive number of units results in a long Order, and a negative
+    /// positive number of units results in a long Order, and a negative
     /// number of units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
     /// depends on what the number represents.
@@ -11051,7 +11053,7 @@ impl MarketIfTouchedOrderTransaction {
     }
 
     /// The quantity requested to be filled by the MarketIfTouched Order. A
-    /// posititive number of units results in a long Order, and a negative
+    /// positive number of units results in a long Order, and a negative
     /// number of units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
     /// depends on what the number represents.
@@ -11293,7 +11295,7 @@ pub struct MarketIfTouchedOrderRejectTransaction {
     pub instrument: Option<String>,
 
     /// The quantity requested to be filled by the MarketIfTouched Order. A
-    /// posititive number of units results in a long Order, and a negative
+    /// positive number of units results in a long Order, and a negative
     /// number of units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
     /// depends on what the number represents.
@@ -11560,7 +11562,7 @@ impl MarketIfTouchedOrderRejectTransaction {
     }
 
     /// The quantity requested to be filled by the MarketIfTouched Order. A
-    /// posititive number of units results in a long Order, and a negative
+    /// positive number of units results in a long Order, and a negative
     /// number of units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
     /// depends on what the number represents.
@@ -15548,7 +15550,7 @@ pub struct OrderClientExtensionsModifyTransaction {
 
     /// The Type of the Transaction. Always set to
     /// "ORDER_CLIENT_EXTENSIONS_MODIFY" for a
-    /// OrderClienteExtensionsModifyTransaction.
+    /// OrderClientExtensionsModifyTransaction.
     #[serde(default)]
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
     pub otype: Option<String>,
@@ -15666,7 +15668,7 @@ impl OrderClientExtensionsModifyTransaction {
 
     /// The Type of the Transaction. Always set to
     /// "ORDER_CLIENT_EXTENSIONS_MODIFY" for a
-    /// OrderClienteExtensionsModifyTransaction.
+    /// OrderClientExtensionsModifyTransaction.
     /// - param String
     /// - return OrderClientExtensionsModifyTransaction
     pub fn with_otype(mut self, x: String) -> Self {
@@ -18442,7 +18444,7 @@ pub struct PositionFinancing {
     )]
     pub financing: Option<f32>,
 
-    /// The financing paid/collecte for each open Trade within the Position.
+    /// The financing paid/collect for each open Trade within the Position.
     #[serde(default)]
     #[serde(
         rename = "openTradeFinancings",
@@ -18481,7 +18483,7 @@ impl PositionFinancing {
         self
     }
 
-    /// The financing paid/collecte for each open Trade within the Position.
+    /// The financing paid/collect for each open Trade within the Position.
     /// - param Vec<OpenTradeFinancing>
     /// - return PositionFinancing
     pub fn with_open_trade_financings(mut self, x: Vec<OpenTradeFinancing>) -> Self {
@@ -19678,7 +19680,7 @@ impl std::fmt::Display for PriceStatus {
 pub struct HomeConversions {
     /// The currency to be converted into the home currency.
     /// format: A string containing an ISO 4217 currency
-    /// (http://en.wikipedia.org/wiki/ISO_4217)
+    /// (https://en.wikipedia.org/wiki/ISO_4217)
     #[serde(default)]
     #[serde(rename = "currency", skip_serializing_if = "Option::is_none")]
     pub currency: Option<String>,
@@ -19734,7 +19736,7 @@ impl HomeConversions {
 
     /// The currency to be converted into the home currency.
     /// format: A string containing an ISO 4217 currency
-    /// (http://en.wikipedia.org/wiki/ISO_4217)
+    /// (https://en.wikipedia.org/wiki/ISO_4217)
     /// - param String
     /// - return HomeConversions
     pub fn with_currency(mut self, x: String) -> Self {
@@ -20389,7 +20391,7 @@ pub struct MarketOrder {
     #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
     pub instrument: Option<String>,
 
-    /// The quantity requested to be filled by the Market Order. A posititive
+    /// The quantity requested to be filled by the Market Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -20676,7 +20678,7 @@ impl MarketOrder {
         self
     }
 
-    /// The quantity requested to be filled by the Market Order. A posititive
+    /// The quantity requested to be filled by the Market Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -20947,7 +20949,7 @@ pub struct FixedPriceOrder {
     pub instrument: Option<String>,
 
     /// The quantity requested to be filled by the Fixed Price Order. A
-    /// posititive number of units results in a long Order, and a negative
+    /// positive number of units results in a long Order, and a negative
     /// number of units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
     /// depends on what the number represents.
@@ -21191,7 +21193,7 @@ impl FixedPriceOrder {
     }
 
     /// The quantity requested to be filled by the Fixed Price Order. A
-    /// posititive number of units results in a long Order, and a negative
+    /// positive number of units results in a long Order, and a negative
     /// number of units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
     /// depends on what the number represents.
@@ -21411,7 +21413,7 @@ pub struct LimitOrder {
     #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
     pub instrument: Option<String>,
 
-    /// The quantity requested to be filled by the Limit Order. A posititive
+    /// The quantity requested to be filled by the Limit Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -21714,7 +21716,7 @@ impl LimitOrder {
         self
     }
 
-    /// The quantity requested to be filled by the Limit Order. A posititive
+    /// The quantity requested to be filled by the Limit Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -21999,7 +22001,7 @@ pub struct StopOrder {
     #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
     pub instrument: Option<String>,
 
-    /// The quantity requested to be filled by the Stop Order. A posititive
+    /// The quantity requested to be filled by the Stop Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -22316,7 +22318,7 @@ impl StopOrder {
         self
     }
 
-    /// The quantity requested to be filled by the Stop Order. A posititive
+    /// The quantity requested to be filled by the Stop Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -22615,7 +22617,7 @@ pub struct MarketIfTouchedOrder {
     pub instrument: Option<String>,
 
     /// The quantity requested to be filled by the MarketIfTouched Order. A
-    /// posititive number of units results in a long Order, and a negative
+    /// positive number of units results in a long Order, and a negative
     /// number of units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
     /// depends on what the number represents.
@@ -22949,7 +22951,7 @@ impl MarketIfTouchedOrder {
     }
 
     /// The quantity requested to be filled by the MarketIfTouched Order. A
-    /// posititive number of units results in a long Order, and a negative
+    /// positive number of units results in a long Order, and a negative
     /// number of units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
     /// depends on what the number represents.
@@ -24782,7 +24784,7 @@ pub struct MarketOrderRequest {
     #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
     pub instrument: Option<String>,
 
-    /// The quantity requested to be filled by the Market Order. A posititive
+    /// The quantity requested to be filled by the Market Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -24901,7 +24903,7 @@ impl MarketOrderRequest {
         self
     }
 
-    /// The quantity requested to be filled by the Market Order. A posititive
+    /// The quantity requested to be filled by the Market Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -25012,7 +25014,7 @@ pub struct LimitOrderRequest {
     #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
     pub instrument: Option<String>,
 
-    /// The quantity requested to be filled by the Limit Order. A posititive
+    /// The quantity requested to be filled by the Limit Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -25171,7 +25173,7 @@ impl LimitOrderRequest {
         self
     }
 
-    /// The quantity requested to be filled by the Limit Order. A posititive
+    /// The quantity requested to be filled by the Limit Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -25322,7 +25324,7 @@ pub struct StopOrderRequest {
     #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
     pub instrument: Option<String>,
 
-    /// The quantity requested to be filled by the Stop Order. A posititive
+    /// The quantity requested to be filled by the Stop Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -25495,7 +25497,7 @@ impl StopOrderRequest {
         self
     }
 
-    /// The quantity requested to be filled by the Stop Order. A posititive
+    /// The quantity requested to be filled by the Stop Order. A positive
     /// number of units results in a long Order, and a negative number of
     /// units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
@@ -25659,7 +25661,7 @@ pub struct MarketIfTouchedOrderRequest {
     pub instrument: Option<String>,
 
     /// The quantity requested to be filled by the MarketIfTouched Order. A
-    /// posititive number of units results in a long Order, and a negative
+    /// positive number of units results in a long Order, and a negative
     /// number of units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
     /// depends on what the number represents.
@@ -25835,7 +25837,7 @@ impl MarketIfTouchedOrderRequest {
     }
 
     /// The quantity requested to be filled by the MarketIfTouched Order. A
-    /// posititive number of units results in a long Order, and a negative
+    /// positive number of units results in a long Order, and a negative
     /// number of units results in a short Order.
     /// format: A decimal number encoded as a string. The amount of precision provided
     /// depends on what the number represents.
@@ -26440,7 +26442,7 @@ impl StopLossOrderRequest {
 #[derive(Debug, Serialize, Deserialize)]
 pub struct TrailingStopLossOrderRequest {
     /// The type of the Order to Create. Must be set to "TRAILING_STOP_LOSS"
-    /// when creating a Trailng Stop Loss Order.
+    /// when creating a Trailing Stop Loss Order.
     #[serde(default)]
     #[serde(rename = "type", skip_serializing_if = "Option::is_none")]
     pub otype: Option<String>,
@@ -26538,7 +26540,7 @@ impl TrailingStopLossOrderRequest {
     }
 
     /// The type of the Order to Create. Must be set to "TRAILING_STOP_LOSS"
-    /// when creating a Trailng Stop Loss Order.
+    /// when creating a Trailing Stop Loss Order.
     /// - param String
     /// - return TrailingStopLossOrderRequest
     pub fn with_otype(mut self, x: String) -> Self {

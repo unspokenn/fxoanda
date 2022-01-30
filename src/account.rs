@@ -77,7 +77,7 @@ pub mod list_positions {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -220,7 +220,7 @@ pub mod list_open_positions {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -369,7 +369,7 @@ pub mod get_position {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -558,7 +558,7 @@ pub mod close_position {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -681,7 +681,7 @@ pub mod close_position {
         /// the user's account. A Market Order is an Order that is filled
         /// immediately at the current market price. Market Orders can be
         /// specialized when they are created to accomplish a specific task: to
-        /// close a Trade, to closeout a Position or to particiate in in a Margin
+        /// close a Trade, to closeout a Position or to participate in in a Margin
         /// closeout.
         #[serde(
             rename = "longOrderCreateTransaction",
@@ -706,7 +706,7 @@ pub mod close_position {
         /// the user's account. A Market Order is an Order that is filled
         /// immediately at the current market price. Market Orders can be
         /// specialized when they are created to accomplish a specific task: to
-        /// close a Trade, to closeout a Position or to particiate in in a Margin
+        /// close a Trade, to closeout a Position or to participate in in a Margin
         /// closeout.
         #[serde(
             rename = "shortOrderCreateTransaction",
@@ -847,7 +847,7 @@ pub mod list_trades {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -1053,7 +1053,7 @@ pub mod list_open_trades {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -1216,7 +1216,7 @@ pub mod get_trade {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -1395,7 +1395,7 @@ pub mod close_trade {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -1486,7 +1486,7 @@ pub mod close_trade {
         /// the user's account. A Market Order is an Order that is filled
         /// immediately at the current market price. Market Orders can be
         /// specialized when they are created to accomplish a specific task: to
-        /// close a Trade, to closeout a Position or to particiate in in a Margin
+        /// close a Trade, to closeout a Position or to participate in in a Margin
         /// closeout.
         #[serde(
             rename = "orderCreateTransaction",
@@ -1620,7 +1620,7 @@ pub mod set_trade_client_extensions {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -1834,7 +1834,7 @@ pub mod set_trade_dependent_orders {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -2239,7 +2239,7 @@ pub mod get_account {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -2397,7 +2397,7 @@ pub mod get_account_summary {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -2555,7 +2555,7 @@ pub mod get_account_instruments {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -2728,7 +2728,7 @@ pub mod configure_account {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -2914,7 +2914,7 @@ pub mod get_account_changes {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -3116,7 +3116,7 @@ pub mod list_transactions {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -3181,7 +3181,7 @@ pub mod list_transactions {
             self
         }
 
-        /// A filter for restricting the types of Transactions to retreive.
+        /// A filter for restricting the types of Transactions to retrieve.
         /// - param Vec<String>
         /// - return ListTransactionsRequest
         pub fn with_otype(mut self, x: Vec<String>) -> Self {
@@ -3361,7 +3361,7 @@ pub mod get_transaction {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -3543,7 +3543,7 @@ pub mod get_transaction_range {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -3570,7 +3570,7 @@ pub mod get_transaction_range {
             self
         }
 
-        /// The starting Transacion ID (inclusive) to fetch.
+        /// The starting Transaction ID (inclusive) to fetch.
         /// format: String representation of the numerical OANDA-assigned TransactionID
         /// - param String
         /// - return GetTransactionRangeRequest
@@ -3588,7 +3588,7 @@ pub mod get_transaction_range {
             self
         }
 
-        /// The filter that restricts the types of Transactions to retreive.
+        /// The filter that restricts the types of Transactions to retrieve.
         /// - param Vec<String>
         /// - return GetTransactionRangeRequest
         pub fn with_otype(mut self, x: Vec<String>) -> Self {
@@ -3733,7 +3733,7 @@ pub mod get_transactions_since_id {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -3760,7 +3760,7 @@ pub mod get_transactions_since_id {
             self
         }
 
-        /// The ID of the last Transacion fetched. This query will return all
+        /// The ID of the last Transaction fetched. This query will return all
         /// Transactions newer than the TransactionID.
         /// format: String representation of the numerical OANDA-assigned TransactionID
         /// - param String
@@ -3897,7 +3897,7 @@ pub mod stream_transactions {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -4075,7 +4075,7 @@ pub mod get_prices {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -4312,7 +4312,7 @@ pub mod stream_pricing {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -4436,11 +4436,17 @@ pub mod get_account_instrument_candles {
     struct RequestPath {
         #[serde(rename = "instrument", skip_serializing_if = "Option::is_none")]
         pub instrument: Option<String>,
+
+        #[serde(rename = "accountID", skip_serializing_if = "Option::is_none")]
+        pub account_id: Option<String>,
     }
 
     impl RequestPath {
         fn new() -> RequestPath {
-            RequestPath { instrument: None }
+            RequestPath {
+                instrument: None,
+                account_id: None,
+            }
         }
     }
 
@@ -4553,6 +4559,16 @@ pub mod get_account_instrument_candles {
         /// - return GetAccountInstrumentCandlesRequest
         pub fn with_instrument(mut self, x: String) -> Self {
             self.path.instrument = Some(x);
+            self
+        }
+
+        /// The string representation of an Account Identifier.
+        /// format: "-"-delimited string with format
+        /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
+        /// - param String
+        /// - return GetAccountInstrumentCandlesRequest
+        pub fn with_account_id(mut self, x: String) -> Self {
+            self.path.account_id = Some(x);
             self
         }
 
@@ -4699,7 +4715,8 @@ pub mod get_account_instrument_candles {
             let uri = self
                 .uri
                 .clone()
-                .replace("{instrument}", &self.path.instrument.unwrap());
+                .replace("{instrument}", &self.path.instrument.unwrap())
+                .replace("{accountID}", &self.path.account_id.unwrap());
             let url = format!("https://{host}{uri}", host = client.host, uri = uri);
             let res = client
                 .reqwest
@@ -4832,7 +4849,7 @@ pub mod create_market_order {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -5042,7 +5059,7 @@ pub mod create_limit_order {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -5252,7 +5269,7 @@ pub mod create_stop_order {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -5480,7 +5497,7 @@ pub mod list_orders {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -5686,7 +5703,7 @@ pub mod list_pending_orders {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -5849,7 +5866,7 @@ pub mod get_order {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -6035,7 +6052,7 @@ pub mod replace_order {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -6280,7 +6297,7 @@ pub mod cancel_order {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String
@@ -6490,7 +6507,7 @@ pub mod set_order_client_extensions {
             self
         }
 
-        /// Account Identifier
+        /// The string representation of an Account Identifier.
         /// format: "-"-delimited string with format
         /// "{siteID}-{divisionID}-{userID}-{accountNumber}"
         /// - param String

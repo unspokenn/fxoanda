@@ -1,9 +1,9 @@
 pub mod get_instrument_candles {
+    use crate::Client;
     use chrono::prelude::*;
     use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
     use std::error::Error;
-    use crate::Client;
-    use serde::{Serialize, Deserialize};
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -320,11 +320,11 @@ pub mod get_instrument_candles {
 }
 
 pub mod get_instrument_price {
+    use crate::Client;
     use chrono::prelude::*;
     use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
     use std::error::Error;
-    use crate::Client;
-    use serde::{Serialize, Deserialize};
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -496,11 +496,11 @@ pub mod get_instrument_price {
 }
 
 pub mod get_instrument_price_range {
+    use crate::Client;
     use chrono::prelude::*;
     use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
     use std::error::Error;
-    use crate::Client;
-    use serde::{Serialize, Deserialize};
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -702,11 +702,11 @@ pub mod get_instrument_price_range {
 }
 
 pub mod get_order_book {
+    use crate::Client;
     use chrono::prelude::*;
     use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
     use std::error::Error;
-    use crate::Client;
-    use serde::{Serialize, Deserialize};
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
@@ -883,11 +883,11 @@ pub mod get_order_book {
 }
 
 pub mod get_position_book {
+    use crate::Client;
     use chrono::prelude::*;
     use fxoanda_definitions::*;
+    use serde::{Deserialize, Serialize};
     use std::error::Error;
-    use crate::Client;
-    use serde::{Serialize, Deserialize};
 
     #[derive(Debug, Serialize, Deserialize)]
     struct RequestHead {
