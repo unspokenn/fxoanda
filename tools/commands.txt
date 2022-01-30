@@ -1,0 +1,4 @@
+python gen.py --type request --url \/instruments --method all
+python gen.py --type request --url \/pricing --method all
+python gen.py --type request --url \/accounts --method all
+python gen.py --type definition --gen struct --url all

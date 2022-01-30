@@ -5,15 +5,16 @@
     "description": "The full OANDA v20 REST API Specification. This specification defines how to interact with v20 Accounts, Trades, Orders, Pricing and more.",
     "contact": {
       "name": "OANDA API Support",
-      "url": "http://developer.oanda.com/rest-live-v20/introduction/",
+      "url": "https://developer.oanda.com/rest-live-v20/introduction/",
       "email": "api@oanda.com"
     },
     "license": {
       "name": "MIT",
       "url": "https://github.com/oanda/v20-openapi/blob/master/LICENSE.txt"
     },
-    "version": "3.0.25"
+    "version": "3.1.25"
   },
+  "host": "api-fxpractice.oanda.com",
   "basePath": "/v3",
   "schemes": [
     "https"
@@ -54,7 +55,7 @@
           },
           {
             "name": "count",
-            "description": "The number of candlesticks to return in the reponse. Count should not be specified if both the start and end parameters are provided, as the time range combined with the graularity will determine the number of candlesticks to return.",
+            "description": "The number of candlesticks to return in the response. Count should not be specified if both the start and end parameters are provided, as the time range combined with the granularity will determine the number of candlesticks to return.",
             "in": "query",
             "type": "integer"
           },
@@ -1818,7 +1819,7 @@
           },
           {
             "name": "type",
-            "description": "A filter for restricting the types of Transactions to retreive.",
+            "description": "A filter for restricting the types of Transactions to retrieve.",
             "in": "query",
             "type": "array",
             "items": {
@@ -2014,7 +2015,7 @@
           },
           {
             "name": "from",
-            "description": "The starting Transacion ID (inclusive) to fetch.",
+            "description": "The starting Transaction ID (inclusive) to fetch.",
             "in": "query",
             "type": "string",
             "format": "String representation of the numerical OANDA-assigned TransactionID",
@@ -2030,7 +2031,7 @@
           },
           {
             "name": "type",
-            "description": "The filter that restricts the types of Transactions to retreive.",
+            "description": "The filter that restricts the types of Transactions to retrieve.",
             "in": "query",
             "type": "array",
             "items": {
@@ -2101,7 +2102,7 @@
           },
           {
             "name": "id",
-            "description": "The ID of the last Transacion fetched. This query will return all Transactions newer than the TransactionID.",
+            "description": "The ID of the last Transaction fetched. This query will return all Transactions newer than the TransactionID.",
             "in": "query",
             "type": "string",
             "format": "String representation of the numerical OANDA-assigned TransactionID",
@@ -2593,7 +2594,7 @@
       "get": {
         "summary": "Get Candlesticks",
         "description": "Fetch candlestick data for an instrument.",
-        "operationId": "getInstrumentCandles",
+        "operationId": "getInstrumentCandlesByAccount",
         "parameters": [
           {
             "$ref": "#/parameters/authorizationHeaderParam"
@@ -2603,6 +2604,9 @@
           },
           {
             "$ref": "#/parameters/instrumentNamePathParam"
+          },
+          {
+            "$ref": "#/parameters/accountIDPathParam"
           },
           {
             "name": "price",
@@ -4140,7 +4144,7 @@
     "Currency": {
       "type": "string",
       "description": "Currency name identifier. Used by clients to refer to currencies.",
-      "format": "A string containing an ISO 4217 currency (http://en.wikipedia.org/wiki/ISO_4217)"
+      "format": "A string containing an ISO 4217 currency (https://en.wikipedia.org/wiki/ISO_4217)"
     },
     "InstrumentName": {
       "type": "string",
@@ -4309,7 +4313,11 @@
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "financingDaysOfWeek": {
-          "$ref": "#/definitions/FinancingDayOfWeek"
+          "type": "array",
+          "description": "The days of the week to debit or credit financing charges; the exact time of day at which to charge the financing is set in the DivisionTradingGroup for the client’s account.",
+          "items": {
+            "$ref": "#/definitions/FinancingDayOfWeek"
+          }
         }
       }
     },
@@ -4398,7 +4406,7 @@
         "currency": {
           "type": "string",
           "description": "The home currency of the Account",
-          "format": "A string containing an ISO 4217 currency (http://en.wikipedia.org/wiki/ISO_4217)"
+          "format": "A string containing an ISO 4217 currency (https://en.wikipedia.org/wiki/ISO_4217)"
         },
         "balance": {
           "type": "string",
@@ -4725,7 +4733,7 @@
         "currency": {
           "type": "string",
           "description": "The home currency of the Account",
-          "format": "A string containing an ISO 4217 currency (http://en.wikipedia.org/wiki/ISO_4217)"
+          "format": "A string containing an ISO 4217 currency (https://en.wikipedia.org/wiki/ISO_4217)"
         },
         "balance": {
           "type": "string",
@@ -5222,7 +5230,7 @@
         "homeCurrency": {
           "type": "string",
           "description": "The home currency of the Account",
-          "format": "A string containing an ISO 4217 currency (http://en.wikipedia.org/wiki/ISO_4217)"
+          "format": "A string containing an ISO 4217 currency (https://en.wikipedia.org/wiki/ISO_4217)"
         }
       }
     },
@@ -5570,7 +5578,7 @@
             "UNITS_INVALID",
             "UNITS_PRECISION_EXCEEDED",
             "UNITS_LIMIT_EXCEEDED",
-            "UNITS_MIMIMUM_NOT_MET",
+            "UNITS_MINIMUM_NOT_MET",
             "PRICE_MISSING",
             "PRICE_INVALID",
             "PRICE_PRECISION_EXCEEDED",
@@ -6068,7 +6076,7 @@
     },
     "MarketOrderTransaction": {
       "type": "object",
-      "description": "A MarketOrderTransaction represents the creation of a Market Order in the user's account. A Market Order is an Order that is filled immediately at the current market price.\nMarket Orders can be specialized when they are created to accomplish a specific task: to close a Trade, to closeout a Position or to particiate in in a Margin closeout.",
+      "description": "A MarketOrderTransaction represents the creation of a Market Order in the user's account. A Market Order is an Order that is filled immediately at the current market price.\nMarket Orders can be specialized when they are created to accomplish a specific task: to close a Trade, to closeout a Position or to participate in in a Margin closeout.",
       "properties": {
         "id": {
           "type": "string",
@@ -6146,7 +6154,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the Market Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the Market Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "timeInForce": {
@@ -6298,7 +6306,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the Market Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the Market Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "timeInForce": {
@@ -6599,7 +6607,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the Fixed Price Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the Fixed Price Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "price": {
@@ -6733,7 +6741,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the Limit Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the Limit Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "price": {
@@ -6893,7 +6901,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the Limit Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the Limit Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "price": {
@@ -7205,7 +7213,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the Stop Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the Stop Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "price": {
@@ -7370,7 +7378,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the Stop Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the Stop Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "price": {
@@ -7687,7 +7695,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the MarketIfTouched Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the MarketIfTouched Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "price": {
@@ -7852,7 +7860,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the MarketIfTouched Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the MarketIfTouched Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "price": {
@@ -10079,7 +10087,7 @@
         },
         "type": {
           "type": "string",
-          "description": "The Type of the Transaction. Always set to \"ORDER_CLIENT_EXTENSIONS_MODIFY\" for a OrderClienteExtensionsModifyTransaction.",
+          "description": "The Type of the Transaction. Always set to \"ORDER_CLIENT_EXTENSIONS_MODIFY\" for a OrderClientExtensionsModifyTransaction.",
           "enum": [
             "CREATE",
             "CLOSE",
@@ -10853,7 +10861,7 @@
     },
     "MarginCallExitTransaction": {
       "type": "object",
-      "description": "A MarginCallExitnterTransaction is created when an Account leaves the margin call state.",
+      "description": "A MarginCallExitTransaction is created when an Account leaves the margin call state.",
       "properties": {
         "id": {
           "type": "string",
@@ -10928,7 +10936,7 @@
     },
     "DelayedTradeClosureTransaction": {
       "type": "object",
-      "description": "A DelayedTradeClosure Transaction is created administratively to indicate open trades that should have been closed but weren't because the open trades' instruments were untradeable at the time. Open trades listed in this transaction will be closed once their respective instruments become tradeable.",
+      "description": "A DelayedTradeClosure Transaction is created administratively to indicate open trades that should have been closed but weren't because the open trades' instruments were untraceable at the time. Open trades listed in this transaction will be closed once their respective instruments become tradeable.",
       "properties": {
         "id": {
           "type": "string",
@@ -11547,7 +11555,7 @@
         },
         "openTradeFinancings": {
           "type": "array",
-          "description": "The financing paid/collecte for each open Trade within the Position.",
+          "description": "The financing paid/collect for each open Trade within the Position.",
           "items": {
             "$ref": "#/definitions/OpenTradeFinancing"
           }
@@ -11780,7 +11788,7 @@
     "UserSpecifier": {
       "type": "string",
       "description": "The specifier that refers to a User",
-      "format": "A user specifier may have one of 3 formats: the OANDA-assigned User ID (numerical), the client-provided username prefixed by the \"@\" symbol (e.g. \"@myusername\"), or the \"@\" symbol. The \"@\" symbol on its own acts as an alias for the username of the user accessing the endpoint (as inferred from the token provided)."
+      "format": "A user specifier may have one of 3 formats: the OANDA-assigned User ID (numerical), the client-provided username prefixed by the \"@\" symbol (e.g. \"@username\"), or the \"@\" symbol. The \"@\" symbol on its own acts as an alias for the username of the user accessing the endpoint (as inferred from the token provided)."
     },
     "UserInfo": {
       "type": "object",
@@ -11886,7 +11894,7 @@
         "currency": {
           "type": "string",
           "description": "The currency to be converted into the home currency.",
-          "format": "A string containing an ISO 4217 currency (http://en.wikipedia.org/wiki/ISO_4217)"
+          "format": "A string containing an ISO 4217 currency (https://en.wikipedia.org/wiki/ISO_4217)"
         },
         "accountGain": {
           "type": "string",
@@ -12127,7 +12135,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the Market Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the Market Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "timeInForce": {
@@ -12272,7 +12280,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the Fixed Price Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the Fixed Price Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "price": {
@@ -12395,7 +12403,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the Limit Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the Limit Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "price": {
@@ -12551,7 +12559,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the Stop Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the Stop Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "price": {
@@ -12712,7 +12720,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the MarketIfTouched Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the MarketIfTouched Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "price": {
@@ -13278,7 +13286,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the Market Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the Market Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "timeInForce": {
@@ -13349,7 +13357,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the Limit Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the Limit Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "price": {
@@ -13436,7 +13444,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the Stop Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the Stop Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "price": {
@@ -13528,7 +13536,7 @@
         },
         "units": {
           "type": "string",
-          "description": "The quantity requested to be filled by the MarketIfTouched Order. A posititive number of units results in a long Order, and a negative number of units results in a short Order.",
+          "description": "The quantity requested to be filled by the MarketIfTouched Order. A positive number of units results in a long Order, and a negative number of units results in a short Order.",
           "format": "A decimal number encoded as a string. The amount of precision provided depends on what the number represents."
         },
         "price": {
@@ -13738,7 +13746,7 @@
       "properties": {
         "type": {
           "type": "string",
-          "description": "The type of the Order to Create. Must be set to \"TRAILING_STOP_LOSS\" when creating a Trailng Stop Loss Order.",
+          "description": "The type of the Order to Create. Must be set to \"TRAILING_STOP_LOSS\" when creating a Trailing Stop Loss Order.",
           "enum": [
             "MARKET",
             "LIMIT",
@@ -13934,7 +13942,7 @@
       "name": "mt4ServerID",
       "description": "MT4 Server ID",
       "in": "path",
-      "type": "int",
+      "type": "integer",
       "required": true
     },
     "authorizationHeaderParam": {
@@ -13959,7 +13967,7 @@
     },
     "accountIDPathParam": {
       "name": "accountID",
-      "description": "Account Identifier",
+      "description": "The string representation of an Account Identifier.",
       "in": "path",
       "type": "string",
       "format": "\"-\"-delimited string with format \"{siteID}-{divisionID}-{userID}-{accountNumber}\"",
@@ -13978,7 +13986,7 @@
       "description": "The User Specifier",
       "in": "path",
       "type": "string",
-      "format": "A user specifier may have one of 3 formats: the OANDA-assigned User ID (numerical), the client-provided username prefixed by the \"@\" symbol (e.g. \"@myusername\"), or the \"@\" symbol. The \"@\" symbol on its own acts as an alias for the username of the user accessing the endpoint (as inferred from the token provided).",
+      "format": "A user specifier may have one of 3 formats: the OANDA-assigned User ID (numerical), the client-provided username prefixed by the \"@\" symbol (e.g. \"@username\"), or the \"@\" symbol. The \"@\" symbol on its own acts as an alias for the username of the user accessing the endpoint (as inferred from the token provided).",
       "required": true
     },
     "orderSpecifierPathParam": {

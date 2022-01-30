@@ -4,6 +4,7 @@ import textwrap
 from argparse import ArgumentParser
 from jinja2 import Environment, FileSystemLoader
 
+
 def snake(s):
     if s == 'type':
         return 'otype'
@@ -283,16 +284,17 @@ def run():
                             r['operationId'] = "create{}".format(variant)
                             modules.append(snake(r['name']))
                             writes.write(request_tmpl.render(url=r['url'], method=r['method'], comment=r['comment'],
-                                                            operationId=r['operationId'], name=r['name'],
-                                                            snake=snake(r['name']), params=r['params'],
-                                                            responses=r['responses']))
+                                                             operationId=r['operationId'], name=r['name'],
+                                                             snake=snake(r['name']), params=r['params'],
+                                                             responses=r['responses']))
 
                     else:
                         r = get_request(schema, url, method)
                         modules.append(snake(r['name']))
                         writes.write(request_tmpl.render(url=r['url'], method=r['method'], comment=r['comment'],
-                                                  operationId=r['operationId'], name=r['name'], snake=snake(r['name']),
-                                                  params=r['params'], responses=r['responses']))
+                                                         operationId=r['operationId'], name=r['name'],
+                                                         snake=snake(r['name']),
+                                                         params=r['params'], responses=r['responses']))
         for m in modules:
             writes.write("pub use {}::*;".format(m))
 
@@ -308,13 +310,14 @@ def run():
                 if 'enum' in obj:
                     e = get_definition_enum(schema, name)
                     writes.write(enum_tmpl.render(name=e['name'], comment=e['comment'], camel=e['camel'],
-                                           variants=e['variants']))
+                                                  variants=e['variants']))
                 elif obj['type'] == 'object':
                     e = get_definition_struct(schema, name)
                     writes.write(
                         struct_tmpl.render(name=e['name'], comment=e['comment'], camel=e['camel'], params=e['params']))
 
-
     writes.close()
+
+
 if __name__ == '__main__':
     run()
