@@ -132,7 +132,7 @@ impl std::fmt::Display for WeeklyAlignment {
 pub struct Candlestick {
     /// The start time of the candlestick
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -190,7 +190,7 @@ impl Candlestick {
 
     /// The start time of the candlestick
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -361,7 +361,7 @@ pub struct OrderBook {
 
     /// The time when the order book snapshot was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -429,7 +429,7 @@ impl OrderBook {
 
     /// The time when the order book snapshot was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -569,7 +569,7 @@ pub struct PositionBook {
 
     /// The time when the position book snapshot was created
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -637,7 +637,7 @@ impl PositionBook {
 
     /// The time when the position book snapshot was created
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -1391,7 +1391,7 @@ pub struct Trade {
 
     /// The date/time when the Trade was opened.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -1513,7 +1513,7 @@ pub struct Trade {
     /// The date/time when the Trade was fully closed. Only provided for
     /// Trades whose state is CLOSED.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -1623,7 +1623,7 @@ impl Trade {
 
     /// The date/time when the Trade was opened.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -1739,7 +1739,7 @@ impl Trade {
     /// The date/time when the Trade was fully closed. Only provided for
     /// Trades whose state is CLOSED.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -1829,7 +1829,7 @@ pub struct TradeSummary {
 
     /// The date/time when the Trade was opened.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -1951,7 +1951,7 @@ pub struct TradeSummary {
     /// The date/time when the Trade was fully closed. Only provided for
     /// Trades whose state is CLOSED.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -2060,7 +2060,7 @@ impl TradeSummary {
 
     /// The date/time when the Trade was opened.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -2176,7 +2176,7 @@ impl TradeSummary {
     /// The date/time when the Trade was fully closed. Only provided for
     /// Trades whose state is CLOSED.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -2347,7 +2347,7 @@ pub struct MT4TransactionHeartbeat {
 
     /// The date/time when the TransactionHeartbeat was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -2379,7 +2379,7 @@ impl MT4TransactionHeartbeat {
 
     /// The date/time when the TransactionHeartbeat was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -3256,7 +3256,7 @@ pub struct Account {
 
     /// The home currency of the Account
     /// format: A string containing an ISO 4217 currency
-    /// (https://en.wikipedia.org/wiki/ISO_4217)
+    /// (<https://en.wikipedia.org/wiki/ISO_4217>)
     #[serde(default)]
     #[serde(rename = "currency", skip_serializing_if = "Option::is_none")]
     pub currency: Option<String>,
@@ -3279,7 +3279,7 @@ pub struct Account {
 
     /// The date/time when the Account was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -3325,7 +3325,7 @@ pub struct Account {
 
     /// The date/time that the Account's resettablePL was last reset.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -3390,7 +3390,7 @@ pub struct Account {
     /// The date/time when the Account entered a margin call state. Only
     /// provided if the Account is in a margin call.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -3414,7 +3414,7 @@ pub struct Account {
 
     /// The date/time of the Account's last margin call extension.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -3449,7 +3449,7 @@ pub struct Account {
 
     /// The date/time of the last order that was filled for this account.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -3700,7 +3700,7 @@ impl Account {
 
     /// The home currency of the Account
     /// format: A string containing an ISO 4217 currency
-    /// (https://en.wikipedia.org/wiki/ISO_4217)
+    /// (<https://en.wikipedia.org/wiki/ISO_4217>)
     /// - param String
     /// - return Account
     pub fn with_currency(mut self, x: String) -> Self {
@@ -3728,7 +3728,7 @@ impl Account {
 
     /// The date/time when the Account was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -3771,7 +3771,7 @@ impl Account {
 
     /// The date/time that the Account's resettablePL was last reset.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -3831,7 +3831,7 @@ impl Account {
     /// The date/time when the Account entered a margin call state. Only
     /// provided if the Account is in a margin call.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -3854,7 +3854,7 @@ impl Account {
 
     /// The date/time of the Account's last margin call extension.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -3900,7 +3900,7 @@ impl Account {
 
     /// The date/time of the last order that was filled for this account.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -4540,7 +4540,7 @@ pub struct AccountSummary {
 
     /// The home currency of the Account
     /// format: A string containing an ISO 4217 currency
-    /// (https://en.wikipedia.org/wiki/ISO_4217)
+    /// (<https://en.wikipedia.org/wiki/ISO_4217>)
     #[serde(default)]
     #[serde(rename = "currency", skip_serializing_if = "Option::is_none")]
     pub currency: Option<String>,
@@ -4563,7 +4563,7 @@ pub struct AccountSummary {
 
     /// The date/time when the Account was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -4609,7 +4609,7 @@ pub struct AccountSummary {
 
     /// The date/time that the Account's resettablePL was last reset.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -4674,7 +4674,7 @@ pub struct AccountSummary {
     /// The date/time when the Account entered a margin call state. Only
     /// provided if the Account is in a margin call.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -4698,7 +4698,7 @@ pub struct AccountSummary {
 
     /// The date/time of the Account's last margin call extension.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -4733,7 +4733,7 @@ pub struct AccountSummary {
 
     /// The date/time of the last order that was filled for this account.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -4966,7 +4966,7 @@ impl AccountSummary {
 
     /// The home currency of the Account
     /// format: A string containing an ISO 4217 currency
-    /// (https://en.wikipedia.org/wiki/ISO_4217)
+    /// (<https://en.wikipedia.org/wiki/ISO_4217>)
     /// - param String
     /// - return AccountSummary
     pub fn with_currency(mut self, x: String) -> Self {
@@ -4994,7 +4994,7 @@ impl AccountSummary {
 
     /// The date/time when the Account was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -5037,7 +5037,7 @@ impl AccountSummary {
 
     /// The date/time that the Account's resettablePL was last reset.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -5097,7 +5097,7 @@ impl AccountSummary {
     /// The date/time when the Account entered a margin call state. Only
     /// provided if the Account is in a margin call.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -5120,7 +5120,7 @@ impl AccountSummary {
 
     /// The date/time of the Account's last margin call extension.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -5166,7 +5166,7 @@ impl AccountSummary {
 
     /// The date/time of the last order that was filled for this account.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -5971,7 +5971,7 @@ pub struct Transaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -6032,7 +6032,7 @@ impl Transaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -6091,7 +6091,7 @@ pub struct CreateTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -6156,7 +6156,7 @@ pub struct CreateTransaction {
 
     /// The home currency of the Account
     /// format: A string containing an ISO 4217 currency
-    /// (https://en.wikipedia.org/wiki/ISO_4217)
+    /// (<https://en.wikipedia.org/wiki/ISO_4217>)
     #[serde(default)]
     #[serde(rename = "homeCurrency", skip_serializing_if = "Option::is_none")]
     pub home_currency: Option<String>,
@@ -6191,7 +6191,7 @@ impl CreateTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -6282,7 +6282,7 @@ impl CreateTransaction {
 
     /// The home currency of the Account
     /// format: A string containing an ISO 4217 currency
-    /// (https://en.wikipedia.org/wiki/ISO_4217)
+    /// (<https://en.wikipedia.org/wiki/ISO_4217>)
     /// - param String
     /// - return CreateTransaction
     pub fn with_home_currency(mut self, x: String) -> Self {
@@ -6301,7 +6301,7 @@ pub struct CloseTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -6369,7 +6369,7 @@ impl CloseTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -6437,7 +6437,7 @@ pub struct ReopenTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -6505,7 +6505,7 @@ impl ReopenTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -6573,7 +6573,7 @@ pub struct ClientConfigureTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -6659,7 +6659,7 @@ impl ClientConfigureTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -6745,7 +6745,7 @@ pub struct ClientConfigureRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -6837,7 +6837,7 @@ impl ClientConfigureRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -6966,7 +6966,7 @@ pub struct TransferFundsTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -7073,7 +7073,7 @@ impl TransferFundsTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -7180,7 +7180,7 @@ pub struct TransferFundsRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -7281,7 +7281,7 @@ impl TransferFundsRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -7444,7 +7444,7 @@ pub struct MarketOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -7661,7 +7661,7 @@ impl MarketOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -7890,7 +7890,7 @@ pub struct MarketOrderRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -8113,7 +8113,7 @@ impl MarketOrderRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -8350,7 +8350,7 @@ pub struct FixedPriceOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -8523,7 +8523,7 @@ impl FixedPriceOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -8730,7 +8730,7 @@ pub struct LimitOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -8814,7 +8814,7 @@ pub struct LimitOrderTransaction {
     /// The date/time when the Limit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -8964,7 +8964,7 @@ impl LimitOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -9066,7 +9066,7 @@ impl LimitOrderTransaction {
     /// The date/time when the Limit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -9207,7 +9207,7 @@ pub struct LimitOrderRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -9291,7 +9291,7 @@ pub struct LimitOrderRejectTransaction {
     /// The date/time when the Limit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -9439,7 +9439,7 @@ impl LimitOrderRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -9541,7 +9541,7 @@ impl LimitOrderRejectTransaction {
     /// The date/time when the Limit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -9706,7 +9706,7 @@ pub struct StopOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -9803,7 +9803,7 @@ pub struct StopOrderTransaction {
     /// The date/time when the Stop Order will be cancelled if its timeInForce
     /// is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -9954,7 +9954,7 @@ impl StopOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -10068,7 +10068,7 @@ impl StopOrderTransaction {
     /// The date/time when the Stop Order will be cancelled if its timeInForce
     /// is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -10209,7 +10209,7 @@ pub struct StopOrderRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -10306,7 +10306,7 @@ pub struct StopOrderRejectTransaction {
     /// The date/time when the Stop Order will be cancelled if its timeInForce
     /// is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -10455,7 +10455,7 @@ impl StopOrderRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -10569,7 +10569,7 @@ impl StopOrderRejectTransaction {
     /// The date/time when the Stop Order will be cancelled if its timeInForce
     /// is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -10734,7 +10734,7 @@ pub struct MarketIfTouchedOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -10834,7 +10834,7 @@ pub struct MarketIfTouchedOrderTransaction {
     /// The date/time when the MarketIfTouched Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -10985,7 +10985,7 @@ impl MarketIfTouchedOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -11102,7 +11102,7 @@ impl MarketIfTouchedOrderTransaction {
     /// The date/time when the MarketIfTouched Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -11243,7 +11243,7 @@ pub struct MarketIfTouchedOrderRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -11344,7 +11344,7 @@ pub struct MarketIfTouchedOrderRejectTransaction {
     /// The date/time when the MarketIfTouched Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -11493,7 +11493,7 @@ impl MarketIfTouchedOrderRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -11611,7 +11611,7 @@ impl MarketIfTouchedOrderRejectTransaction {
     /// The date/time when the MarketIfTouched Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -11779,7 +11779,7 @@ pub struct TakeProfitOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -11858,7 +11858,7 @@ pub struct TakeProfitOrderTransaction {
     /// The date/time when the TakeProfit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -11971,7 +11971,7 @@ impl TakeProfitOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -12072,7 +12072,7 @@ impl TakeProfitOrderTransaction {
     /// The date/time when the TakeProfit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -12171,7 +12171,7 @@ pub struct TakeProfitOrderRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -12250,7 +12250,7 @@ pub struct TakeProfitOrderRejectTransaction {
     /// The date/time when the TakeProfit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -12361,7 +12361,7 @@ impl TakeProfitOrderRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -12462,7 +12462,7 @@ impl TakeProfitOrderRejectTransaction {
     /// The date/time when the TakeProfit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -12588,7 +12588,7 @@ pub struct StopLossOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -12681,7 +12681,7 @@ pub struct StopLossOrderTransaction {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -12819,7 +12819,7 @@ impl StopLossOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -12933,7 +12933,7 @@ impl StopLossOrderTransaction {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -13056,7 +13056,7 @@ pub struct StopLossOrderRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -13149,7 +13149,7 @@ pub struct StopLossOrderRejectTransaction {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -13270,7 +13270,7 @@ impl StopLossOrderRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -13384,7 +13384,7 @@ impl StopLossOrderRejectTransaction {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -13521,7 +13521,7 @@ pub struct TrailingStopLossOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -13599,7 +13599,7 @@ pub struct TrailingStopLossOrderTransaction {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -13712,7 +13712,7 @@ impl TrailingStopLossOrderTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -13812,7 +13812,7 @@ impl TrailingStopLossOrderTransaction {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -13911,7 +13911,7 @@ pub struct TrailingStopLossOrderRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -13990,7 +13990,7 @@ pub struct TrailingStopLossOrderRejectTransaction {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -14101,7 +14101,7 @@ impl TrailingStopLossOrderRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -14202,7 +14202,7 @@ impl TrailingStopLossOrderRejectTransaction {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -14352,7 +14352,7 @@ pub struct OrderFillTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -14632,7 +14632,7 @@ impl OrderFillTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -15105,7 +15105,7 @@ pub struct OrderCancelTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -15208,7 +15208,7 @@ impl OrderCancelTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -15319,7 +15319,7 @@ pub struct OrderCancelRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -15412,7 +15412,7 @@ impl OrderCancelRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -15511,7 +15511,7 @@ pub struct OrderClientExtensionsModifyTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -15618,7 +15618,7 @@ impl OrderClientExtensionsModifyTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -15727,7 +15727,7 @@ pub struct OrderClientExtensionsModifyRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -15840,7 +15840,7 @@ impl OrderClientExtensionsModifyRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -15957,7 +15957,7 @@ pub struct TradeClientExtensionsModifyTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -16053,7 +16053,7 @@ impl TradeClientExtensionsModifyTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -16152,7 +16152,7 @@ pub struct TradeClientExtensionsModifyRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -16254,7 +16254,7 @@ impl TradeClientExtensionsModifyRejectTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -16361,7 +16361,7 @@ pub struct MarginCallEnterTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -16429,7 +16429,7 @@ impl MarginCallEnterTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -16497,7 +16497,7 @@ pub struct MarginCallExtendTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -16573,7 +16573,7 @@ impl MarginCallExtendTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -16651,7 +16651,7 @@ pub struct MarginCallExitTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -16719,7 +16719,7 @@ impl MarginCallExitTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -16787,7 +16787,7 @@ pub struct DelayedTradeClosureTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -16871,7 +16871,7 @@ impl DelayedTradeClosureTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -16959,7 +16959,7 @@ pub struct DailyFinancingTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -17066,7 +17066,7 @@ impl DailyFinancingTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -17170,7 +17170,7 @@ pub struct ResetResettablePLTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -17238,7 +17238,7 @@ impl ResetResettablePLTransaction {
 
     /// The date/time when the Transaction was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -17371,7 +17371,7 @@ pub struct TakeProfitDetails {
     /// The date when the Take Profit Order will be cancelled on if
     /// timeInForce is GTD.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -17425,7 +17425,7 @@ impl TakeProfitDetails {
     /// The date when the Take Profit Order will be cancelled on if
     /// timeInForce is GTD.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -17484,7 +17484,7 @@ pub struct StopLossDetails {
     /// The date when the Stop Loss Order will be cancelled on if timeInForce
     /// is GTD.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -17560,7 +17560,7 @@ impl StopLossDetails {
     /// The date when the Stop Loss Order will be cancelled on if timeInForce
     /// is GTD.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -17617,7 +17617,7 @@ pub struct TrailingStopLossDetails {
     /// The date when the Trailing Stop Loss Order will be cancelled on if
     /// timeInForce is GTD.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -17671,7 +17671,7 @@ impl TrailingStopLossDetails {
     /// The date when the Trailing Stop Loss Order will be cancelled on if
     /// timeInForce is GTD.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -18291,7 +18291,7 @@ impl LiquidityRegenerationSchedule {
 pub struct LiquidityRegenerationScheduleStep {
     /// The timestamp of the schedule step.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -18338,7 +18338,7 @@ impl LiquidityRegenerationScheduleStep {
 
     /// The timestamp of the schedule step.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -19296,7 +19296,7 @@ pub struct TransactionHeartbeat {
 
     /// The date/time when the TransactionHeartbeat was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -19338,7 +19338,7 @@ impl TransactionHeartbeat {
 
     /// The date/time when the TransactionHeartbeat was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -19488,7 +19488,7 @@ pub struct ClientPrice {
 
     /// The date/time when the Price was created
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -19582,7 +19582,7 @@ impl ClientPrice {
 
     /// The date/time when the Price was created
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -19680,7 +19680,7 @@ impl std::fmt::Display for PriceStatus {
 pub struct HomeConversions {
     /// The currency to be converted into the home currency.
     /// format: A string containing an ISO 4217 currency
-    /// (https://en.wikipedia.org/wiki/ISO_4217)
+    /// (<https://en.wikipedia.org/wiki/ISO_4217>)
     #[serde(default)]
     #[serde(rename = "currency", skip_serializing_if = "Option::is_none")]
     pub currency: Option<String>,
@@ -19736,7 +19736,7 @@ impl HomeConversions {
 
     /// The currency to be converted into the home currency.
     /// format: A string containing an ISO 4217 currency
-    /// (https://en.wikipedia.org/wiki/ISO_4217)
+    /// (<https://en.wikipedia.org/wiki/ISO_4217>)
     /// - param String
     /// - return HomeConversions
     pub fn with_currency(mut self, x: String) -> Self {
@@ -19789,7 +19789,7 @@ pub struct PricingHeartbeat {
 
     /// The date/time when the Heartbeat was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -19821,7 +19821,7 @@ impl PricingHeartbeat {
 
     /// The date/time when the Heartbeat was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -20262,7 +20262,7 @@ pub struct Order {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -20311,7 +20311,7 @@ impl Order {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -20354,7 +20354,7 @@ pub struct MarketOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -20518,7 +20518,7 @@ pub struct MarketOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -20571,7 +20571,7 @@ pub struct MarketOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -20630,7 +20630,7 @@ impl MarketOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -20824,7 +20824,7 @@ impl MarketOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -20885,7 +20885,7 @@ impl MarketOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -20910,7 +20910,7 @@ pub struct FixedPriceOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -21036,7 +21036,7 @@ pub struct FixedPriceOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -21089,7 +21089,7 @@ pub struct FixedPriceOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -21143,7 +21143,7 @@ impl FixedPriceOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -21290,7 +21290,7 @@ impl FixedPriceOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -21351,7 +21351,7 @@ impl FixedPriceOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -21376,7 +21376,7 @@ pub struct LimitOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -21447,7 +21447,7 @@ pub struct LimitOrder {
     /// The date/time when the Limit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -21539,7 +21539,7 @@ pub struct LimitOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -21592,7 +21592,7 @@ pub struct LimitOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -21668,7 +21668,7 @@ impl LimitOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -21751,7 +21751,7 @@ impl LimitOrder {
     /// The date/time when the Limit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -21854,7 +21854,7 @@ impl LimitOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -21915,7 +21915,7 @@ impl LimitOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -21964,7 +21964,7 @@ pub struct StopOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -22048,7 +22048,7 @@ pub struct StopOrder {
     /// The date/time when the Stop Order will be cancelled if its timeInForce
     /// is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -22140,7 +22140,7 @@ pub struct StopOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -22193,7 +22193,7 @@ pub struct StopOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -22270,7 +22270,7 @@ impl StopOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -22365,7 +22365,7 @@ impl StopOrder {
     /// The date/time when the Stop Order will be cancelled if its timeInForce
     /// is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -22468,7 +22468,7 @@ impl StopOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -22529,7 +22529,7 @@ impl StopOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -22578,7 +22578,7 @@ pub struct MarketIfTouchedOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -22666,7 +22666,7 @@ pub struct MarketIfTouchedOrder {
     /// The date/time when the MarketIfTouched Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -22770,7 +22770,7 @@ pub struct MarketIfTouchedOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -22823,7 +22823,7 @@ pub struct MarketIfTouchedOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -22901,7 +22901,7 @@ impl MarketIfTouchedOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23000,7 +23000,7 @@ impl MarketIfTouchedOrder {
     /// The date/time when the MarketIfTouched Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23114,7 +23114,7 @@ impl MarketIfTouchedOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23175,7 +23175,7 @@ impl MarketIfTouchedOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23224,7 +23224,7 @@ pub struct TakeProfitOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23291,7 +23291,7 @@ pub struct TakeProfitOrder {
     /// The date/time when the TakeProfit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23339,7 +23339,7 @@ pub struct TakeProfitOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23392,7 +23392,7 @@ pub struct TakeProfitOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23463,7 +23463,7 @@ impl TakeProfitOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23546,7 +23546,7 @@ impl TakeProfitOrder {
     /// The date/time when the TakeProfit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23596,7 +23596,7 @@ impl TakeProfitOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23657,7 +23657,7 @@ impl TakeProfitOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23706,7 +23706,7 @@ pub struct StopLossOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23799,7 +23799,7 @@ pub struct StopLossOrder {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23855,7 +23855,7 @@ pub struct StopLossOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23908,7 +23908,7 @@ pub struct StopLossOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -23982,7 +23982,7 @@ impl StopLossOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -24089,7 +24089,7 @@ impl StopLossOrder {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -24150,7 +24150,7 @@ impl StopLossOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -24211,7 +24211,7 @@ impl StopLossOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -24260,7 +24260,7 @@ pub struct TrailingStopLossOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -24326,7 +24326,7 @@ pub struct TrailingStopLossOrder {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -24390,7 +24390,7 @@ pub struct TrailingStopLossOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -24443,7 +24443,7 @@ pub struct TrailingStopLossOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -24515,7 +24515,7 @@ impl TrailingStopLossOrder {
 
     /// The time when the Order was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -24597,7 +24597,7 @@ impl TrailingStopLossOrder {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -24662,7 +24662,7 @@ impl TrailingStopLossOrder {
     /// Date/time when the Order was filled (only provided when the Order's
     /// state is FILLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -24723,7 +24723,7 @@ impl TrailingStopLossOrder {
     /// Date/time when the Order was cancelled (only provided when the state
     /// of the Order is CANCELLED)
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -25048,7 +25048,7 @@ pub struct LimitOrderRequest {
     /// The date/time when the Limit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -25208,7 +25208,7 @@ impl LimitOrderRequest {
     /// The date/time when the Limit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -25371,7 +25371,7 @@ pub struct StopOrderRequest {
     /// The date/time when the Stop Order will be cancelled if its timeInForce
     /// is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -25544,7 +25544,7 @@ impl StopOrderRequest {
     /// The date/time when the Stop Order will be cancelled if its timeInForce
     /// is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -25710,7 +25710,7 @@ pub struct MarketIfTouchedOrderRequest {
     /// The date/time when the MarketIfTouched Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -25886,7 +25886,7 @@ impl MarketIfTouchedOrderRequest {
     /// The date/time when the MarketIfTouched Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -26031,7 +26031,7 @@ pub struct TakeProfitOrderRequest {
     /// The date/time when the TakeProfit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -26141,7 +26141,7 @@ impl TakeProfitOrderRequest {
     /// The date/time when the TakeProfit Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -26247,7 +26247,7 @@ pub struct StopLossOrderRequest {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -26380,7 +26380,7 @@ impl StopLossOrderRequest {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -26482,7 +26482,7 @@ pub struct TrailingStopLossOrderRequest {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -26591,7 +26591,7 @@ impl TrailingStopLossOrderRequest {
     /// The date/time when the StopLoss Order will be cancelled if its
     /// timeInForce is "GTD".
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -26835,7 +26835,7 @@ pub struct Price {
 
     /// The date/time when the Price was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine
@@ -26946,7 +26946,7 @@ impl Price {
 
     /// The date/time when the Price was created.
     /// format: The RFC 3339 representation is a string conforming to
-    /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+    /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
     /// string representing the number of seconds since the Unix Epoch
     /// (January 1st, 1970 at UTC). The value is a fractional number, where
     /// the fractional part represents a fraction of a second (up to nine

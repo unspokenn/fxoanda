@@ -3146,7 +3146,7 @@ pub mod list_transactions {
         /// The starting time (inclusive) of the time range for the Transactions
         /// being queried.
         /// format: The RFC 3339 representation is a string conforming to
-        /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+        /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
         /// string representing the number of seconds since the Unix Epoch
         /// (January 1st, 1970 at UTC). The value is a fractional number, where
         /// the fractional part represents a fraction of a second (up to nine
@@ -3161,7 +3161,7 @@ pub mod list_transactions {
         /// The ending time (inclusive) of the time range for the Transactions
         /// being queried.
         /// format: The RFC 3339 representation is a string conforming to
-        /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+        /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
         /// string representing the number of seconds since the Unix Epoch
         /// (January 1st, 1970 at UTC). The value is a fractional number, where
         /// the fractional part represents a fraction of a second (up to nine
@@ -3226,7 +3226,7 @@ pub mod list_transactions {
     pub struct ListTransactionsResponse200Body {
         /// The starting time provided in the request.
         /// format: The RFC 3339 representation is a string conforming to
-        /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+        /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
         /// string representing the number of seconds since the Unix Epoch
         /// (January 1st, 1970 at UTC). The value is a fractional number, where
         /// the fractional part represents a fraction of a second (up to nine
@@ -3239,7 +3239,7 @@ pub mod list_transactions {
         pub from: Option<DateTime<Utc>>,
         /// The ending time provided in the request.
         /// format: The RFC 3339 representation is a string conforming to
-        /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+        /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
         /// string representing the number of seconds since the Unix Epoch
         /// (January 1st, 1970 at UTC). The value is a fractional number, where
         /// the fractional part represents a fraction of a second (up to nine
@@ -4115,7 +4115,7 @@ pub mod get_prices {
         /// the price has changed after the since time) will be provided, and are
         /// filtered independently.
         /// format: The RFC 3339 representation is a string conforming to
-        /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+        /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
         /// string representing the number of seconds since the Unix Epoch
         /// (January 1st, 1970 at UTC). The value is a fractional number, where
         /// the fractional part represents a fraction of a second (up to nine
@@ -4193,7 +4193,7 @@ pub mod get_prices {
         /// The DateTime value to use for the "since" parameter in the next poll
         /// request.
         /// format: The RFC 3339 representation is a string conforming to
-        /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+        /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
         /// string representing the number of seconds since the Unix Epoch
         /// (January 1st, 1970 at UTC). The value is a fractional number, where
         /// the fractional part represents a fraction of a second (up to nine
@@ -4620,7 +4620,7 @@ pub mod get_account_instrument_candles {
 
         /// The start of the time range to fetch candlesticks for.
         /// format: The RFC 3339 representation is a string conforming to
-        /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+        /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
         /// string representing the number of seconds since the Unix Epoch
         /// (January 1st, 1970 at UTC). The value is a fractional number, where
         /// the fractional part represents a fraction of a second (up to nine
@@ -4634,7 +4634,7 @@ pub mod get_account_instrument_candles {
 
         /// The end of the time range to fetch candlesticks for.
         /// format: The RFC 3339 representation is a string conforming to
-        /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+        /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
         /// string representing the number of seconds since the Unix Epoch
         /// (January 1st, 1970 at UTC). The value is a fractional number, where
         /// the fractional part represents a fraction of a second (up to nine

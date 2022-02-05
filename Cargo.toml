@@ -12,5 +12,3 @@ serde = { version = "1.0.83", features = ["derive"] }
 chrono = { version = "0.4.6", features = ["serde"] }
 fxoanda_definitions = { path = "fxoanda_definitions/", version = "0.2.0" }
 fxoanda_serdes = { path = "fxoanda_serdes/", version = "0.2.0" }
-
-

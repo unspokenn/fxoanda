@@ -109,7 +109,7 @@ pub mod get_base_prices {
         /// The current price for each instrument is returned if no time is
         /// provided.
         /// format: The RFC 3339 representation is a string conforming to
-        /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+        /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
         /// string representing the number of seconds since the Unix Epoch
         /// (January 1st, 1970 at UTC). The value is a fractional number, where
         /// the fractional part represents a fraction of a second (up to nine
@@ -291,7 +291,7 @@ pub mod get_price_range {
 
         /// The start of the time range to fetch prices for.
         /// format: The RFC 3339 representation is a string conforming to
-        /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+        /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
         /// string representing the number of seconds since the Unix Epoch
         /// (January 1st, 1970 at UTC). The value is a fractional number, where
         /// the fractional part represents a fraction of a second (up to nine
@@ -306,7 +306,7 @@ pub mod get_price_range {
         /// The end of the time range to fetch prices for. The current time is
         /// used if this parameter is not provided.
         /// format: The RFC 3339 representation is a string conforming to
-        /// https://tools.ietf.org/rfc/rfc3339.txt. The Unix representation is a
+        /// <https://tools.ietf.org/rfc/rfc3339.txt> The Unix representation is a
         /// string representing the number of seconds since the Unix Epoch
         /// (January 1st, 1970 at UTC). The value is a fractional number, where
         /// the fractional part represents a fraction of a second (up to nine
