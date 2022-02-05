@@ -45,11 +45,18 @@ fn main() {
         Err(e) => println!("ERR: {:#?}", e),
     }
 
-    let response = fxoanda::ListAccountsRequest::new()
-        .remote(&client).unwrap();
-    let accounts = response.accounts.expect("Did not find 'accounts' field in response");
-    let account = accounts.get(0).expect("Did not find an 'account' in the 'accounts' field");
-    let account_id = account.id.as_ref().expect("Did not find an 'id' field in the 'account'").to_string();
+    let response = fxoanda::ListAccountsRequest::new().remote(&client).unwrap();
+    let accounts = response
+        .accounts
+        .expect("Did not find 'accounts' field in response");
+    let account = accounts
+        .get(0)
+        .expect("Did not find an 'account' in the 'accounts' field");
+    let account_id = account
+        .id
+        .as_ref()
+        .expect("Did not find an 'id' field in the 'account'")
+        .to_string();
 
     match fxoanda::GetAccountSummaryRequest::new()
         .with_account_id(account_id.to_owned())
