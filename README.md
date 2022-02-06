@@ -17,7 +17,7 @@ top.
 
 ```toml
 # in your Cargo.toml
-reqwest = {version = "0.10.6", features = ["blocking","json"]}
+reqwest = { version = "^0.11", default-features = false, features = ["blocking", "json","tokio-native-tls"] }
 fxoanda = "0.1.3"
 
 ```
