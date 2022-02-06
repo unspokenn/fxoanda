@@ -1,13 +1,13 @@
 [package]
 name = "fxoanda"
-version = "0.2.3"
+version = "0.2.4"
 authors = ["James McGill <jbmcgill@gmail.com>"]
 description = "Library to conduct currency conversion with the Oanda API"
 license = "MIT/Apache-2.0"
 edition = "2021"
 
 [dependencies]
-reqwest = { version = "0.11.9", features = ["blocking", "json"] }
+reqwest = { version = "^0.11", default-features = false, features = ["blocking", "serde_json","tokio-native-tls"] }
 serde = { version = "1.0.83", features = ["derive"] }
 chrono = { version = "0.4.6", features = ["serde"] }
 fxoanda_definitions = { path = "fxoanda_definitions/", version = "0.2.0" }
