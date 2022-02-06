@@ -7,7 +7,7 @@ license = "MIT/Apache-2.0"
 edition = "2021"
 
 [dependencies]
-reqwest = { version = "^0.11", default-features = false, features = ["blocking", "serde_json","tokio-native-tls"] }
+reqwest = { version = "^0.11", default-features = false, features = ["blocking", "json","tokio-native-tls"] }
 serde = { version = "1.0.83", features = ["derive"] }
 chrono = { version = "0.4.6", features = ["serde"] }
 fxoanda_definitions = { path = "fxoanda_definitions/", version = "0.2.0" }
